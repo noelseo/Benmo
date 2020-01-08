@@ -6,8 +6,8 @@
 #  first_name      :string           not null
 #  last_name       :string           not null
 #  email           :string           not null
-#  phone_number    :integer          not null
-#  username        :string
+#  phone_number    :string           not null
+#  username        :string           not null
 #  balance         :float
 #  password_digest :string           not null
 #  session_token   :string           not null
@@ -16,7 +16,7 @@
 #
 
 class User < ApplicationRecord
-    validates :first_name, :last_name, :email, :phone_number, :password_digest, presence: true
+    validates :first_name, :last_name, :email, :phone_number, :username, :password_digest, presence: true
     validates :email, :phone_number, :username, :session_token, uniqueness: true
     validates :password, length: { minimum: 8, allow_nil: true }
 
