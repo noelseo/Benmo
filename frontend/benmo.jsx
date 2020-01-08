@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store'
 import { signup, login, logout } from './actions/session_actions'
+import Root from './components/root';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;

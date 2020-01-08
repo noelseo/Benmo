@@ -16,13 +16,13 @@ const App = () => (
     <div>
         <header>
             <h1>Benmo</h1>
-            <GreetingContainer />
+            {/* <GreetingContainer /> */}
         </header>
-        <Route exact path="/" component={Greeting} />
+
+        <Route path="/" component={GreetingContainer} />
         <AuthRoute path="/sign-in" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
     </div>
 );
 
 export default App;
-

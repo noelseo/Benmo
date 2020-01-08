@@ -24,8 +24,11 @@ class SessionForm extends React.Component {
             <form onSubmit={this.handleSubmit}>
                 FIRST NAME<input type="text" value={this.state.first_name} onChange={this.update('first_name')} />
                 LAST NAME<input type="text" value={this.state.last_name} onChange={this.update('last_name')} />
+                <br/>
                 EMAIL<input type="text" value={this.state.email} onChange={this.update('email')} />
+                <br/>
                 PHONE NUMBER<input type="text" value={this.state.phone_number} onChange={this.update('phone_number')} />
+                <br/>
                 PASSWORD<input type="text" value={this.state.password} onChange={this.update('password')} />
                 <input type="submit" />
             </form>

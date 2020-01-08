@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import SessionForm from "./login_form";
+import SessionForm from "./signup_form";
 import * as SessionActions from "../../actions/session_actions";
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
