@@ -1,10 +1,17 @@
 import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
+import LoginFormContainer from './session/login_form_container';
+import SignupFormContainer from './session/signup_form_container';
 
 const App = () => (
     <div>
-        <h1>Benmo</h1>
-        <GreetingContainer />
+        <header>
+            <h1>Benmo</h1>
+            <GreetingContainer />
+        </header>
+
+        <Route path="/sign-in" component={LoginFormContainer} />
+        <Route path="/signup" component={SignupFormContainer} />
     </div>
 );
 

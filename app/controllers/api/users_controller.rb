@@ -13,7 +13,7 @@ class Api::UsersController < ApplicationController
     end
 
     def show
-        @user = User.find_by(username: username)
+        @user = User.find(params[:id])
     end
 
     private
