@@ -27,7 +27,7 @@ class SessionForm extends React.Component {
         return (
             <div className="auth-signup">
                 <div className="auth-header-text">
-                    <h1>Create your account</h1>
+                    <h2>Create your account</h2>
                     
                     <button className="facebook-button" onClick={this.facebookButton}>
                         <span className="facebook-logo"></span>
@@ -36,7 +36,7 @@ class SessionForm extends React.Component {
                 </div>
 
                 <form className="auth-form" onSubmit={this.handleSubmit}>
-                    <fieldset className="inputs">
+                    <div className="inputs">
 
                         <label className="error auth-form-input-label first-last-name first-name">
                             <span className="label-text">FIRST NAME</span>
@@ -69,7 +69,7 @@ class SessionForm extends React.Component {
                             <span className="error-text">Required</span>
                         </label>
 
-                    </fieldset>
+                    </div>
 
                     <div className="button-wrapper">
                         <a href="https://venmo.com/legal/us-helpful-information" className="auth-help">Helpful Information</a>

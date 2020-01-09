@@ -8,9 +8,9 @@ const Greeting = ({ currentUser, logout }) => {
 //}
 
     const sessionLinks = () => (
-        <nav className="signin-signup">
+        <nav className="signin">
             <Link to="/sign-in">Sign In</Link>
-            <Link to="/signup">Sign Up</Link>
+            {/* <Link to="/signup">Sign Up</Link> */}
         </nav>
     );
 
