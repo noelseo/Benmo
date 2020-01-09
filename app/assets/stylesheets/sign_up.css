@@ -1,0 +1,173 @@
+.auth-signup {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+}
+
+.auth-header-text {
+    margin: 0 auto 28px;
+    max-width: 360px;
+    text-align: center;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.auth-form {
+    background: #f7f7f7;
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    margin: 0 auto 40px;
+    padding: 28px;
+    position: absolute;
+    max-width: 600px;
+    height: 800px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f7f7f7;
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    margin: 0 auto 40px;
+    padding: 28px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;    
+}
+
+.auth-form fieldset {
+    margin-bottom: 20px;
+}
+
+fieldset, legend {
+    border: 0;
+    padding: 0;
+}
+
+fieldset {
+    margin: 0;
+    min-width: 0;
+}
+
+fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-style: groove;
+    border-color: threedface;
+    border-image: initial;
+}
+
+.first-last-name.first-name {
+    padding-right: 10px;
+}
+
+.first-last-name {
+    float: left;
+    width: 50%;
+}
+
+/* .auth-form-input-label.error .error-text, .auth-form-input-label.error .label-text {
+    color: red;
+} */
+
+.auth-form-input-label .label-text {
+    color: #7f7f7f;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    padding-left: 4px;
+    text-transform: uppercase;
+}
+
+input {
+    border-bottom-color: red;
+    margin-bottom: 0;
+}
+
+.auth-form-input {
+    -webkit-box-shadow: none;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #d9d9d9;
+    border-radius: 0;
+    box-shadow: none;
+    color: #262626;
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    min-width: 0;
+    padding: 12px 8px 12px 4px;
+    width: 100%;
+}
+
+.first-last-name {
+    float: left;
+    width: 50%;
+}
+
+.auth-form-input-label {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 36px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.facebook-button {
+    -webkit-box-shadow: 0 1px 2px rgba(38,38,38,.15);
+    -webkit-box-sizing: border-box;
+    background: #3d95ce;
+    background: #4267b2;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(38,38,38,.15);
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: helvetica neue;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    line-height: 1.5;
+    padding: 12px 20px;
+}
+
+.facebook-logo {
+    background-image: url(https://cdn1.venmo.com/production/images/icons/fb-icon.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 4px 0 0 4px;
+    margin-right: 16px;
+    padding: 6px;
+}
+
+.auth-footer-text {
+    color: #7f7f7f;
+    display: block;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center;
+}

@@ -11,7 +11,7 @@ const SessionReducer = (oldState = { id: null }, action) => { //grabs the approp
             return { id: action.currentUser.id }; 
 
         case LOGOUT_CURRENT_USER:
-            return oldState;
+            return { id: null };
 
         default:
             return oldState;
