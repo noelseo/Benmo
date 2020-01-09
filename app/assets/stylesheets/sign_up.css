@@ -121,6 +121,21 @@ input {
     margin-bottom: 36px;
 }
 
+.sign-up-button {
+    background-color: #bcc2cc;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.sign-up-button:hover {
+    background-color: #3d95ce;
+}
 
 
 

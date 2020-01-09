@@ -15,8 +15,8 @@ import Main from './main/main'
 
 const App = () => (
     <div>
-        <header className="benmo">
-            <h1>Benmo</h1>
+        <header>
+            <h1 className="benmo">benmo</h1>
             {/* <GreetingContainer /> */}
         </header>
 

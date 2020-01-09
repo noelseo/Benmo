@@ -137,3 +137,18 @@
     display: block;
     padding: 4px 0 0 4px;
 }
+
+.sign-in-button {
+    color: #3d95ce;
+    text-decoration: none;
+    font-size: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.sign-in-button:hover {
+    color: #dce0e6;
+}
