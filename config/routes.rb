@@ -9,3 +9,9 @@ Rails.application.routes.draw do
   end
 
 end
+
+#rails creates 'routes table' using the above
+#rails router routes the appropriate request from ajax calls
+#then goes to the appropriate controller then finds the appropriate method
+
+#any api_util.js <- -> any appropriate controller.rb

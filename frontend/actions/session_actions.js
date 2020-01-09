@@ -9,8 +9,8 @@ export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 // logoutCurrentUser()(regular action creator)
 // receiveErrors(errors)(regular action creator)
 const receiveCurrentUser = (currentUser) => ({
-    type: 'RECEIVE_CURRENT_USER',
-    currentUser
+    type: 'RECEIVE_CURRENT_USER', //type
+    currentUser //payload { currentUser: currentUser }
 })
 
 const logoutCurrentUser = () => ({
@@ -42,9 +42,11 @@ export const login = (user) => dispatch => (
 )
 
 export const logout = () => dispatch => (
-    SessionApiUtil.logoutUser()
-        .then(
-            () => dispatch(logoutCurrentUser()),
+    SessionApiUtil.logoutUser() //upon this being successful
+        .then( //then do the below
+            () => dispatch(logoutCurrentUser()), //dispatches(sends) the action to the appropriate reducer
             (errors) => dispatch(receiveErrors(errors))
         )
 )
+
+//session_reducer.js <- -> session_api_util.js

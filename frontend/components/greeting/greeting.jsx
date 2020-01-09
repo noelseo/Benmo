@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 
 const Greeting = ({ currentUser, logout }) => {
 
+//class Greeting extends React.Component {
+//   const { currentUser, logout } = this.props;
+//}
+
     const sessionLinks = () => (
         <nav className="signin-signup">
             <Link to="/sign-in">Sign In</Link>

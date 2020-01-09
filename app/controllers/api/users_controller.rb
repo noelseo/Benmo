@@ -1,6 +1,5 @@
 class Api::UsersController < ApplicationController
 
-    #sign up
     def create
         @user = User.new(user_params)
         @user.username = @user.first_name[0] + '-' + @user.last_name[0] + '-' +(User.last.id + 1).to_s
@@ -11,6 +10,8 @@ class Api::UsersController < ApplicationController
             render json: @user.errors.full_messages, status: 422 
         end
     end
+    #creates a new user and the user gets saved in the database
+
 
     def show
         @user = User.find(params[:id])
