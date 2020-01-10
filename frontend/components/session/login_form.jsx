@@ -80,7 +80,7 @@ class LoginForm extends React.Component {
         const totalDemoTime = demoEmailTime + demoPasswordTime + buffer;
         this.demoEmail(email, intervalSpeed);
         setTimeout(() => this.demoPassword(password, intervalSpeed), demoEmailTime);
-        setTimeout(() => this.props.processForm(user), totalDemoTime);
+        setTimeout(() => this.props.processForm(user), totalDemoTime + 300);
     }
 
     demoEmail(email, intervalSpeed) {
@@ -94,6 +94,7 @@ class LoginForm extends React.Component {
             }
         }, intervalSpeed);
     }
+    
     demoPassword(password, intervalSpeed) {
         let j = 0;
         setInterval(() => {

@@ -89,6 +89,16 @@ class SessionForm extends React.Component {
             </div>
         );
     }
+
+
+    //errors 
+    renderErrors() {
+        return (this.props.errors.map((error, i) => (
+            <div key={`signup-error-${i}`} className="signin-error">{error}</div>
+        )))
+    }
+
+    
 }
 
 export default SessionForm;
