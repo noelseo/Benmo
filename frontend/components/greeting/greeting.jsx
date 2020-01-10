@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 const Greeting = ({ currentUser, logout }) => {
-
+//above is same as below
 //class Greeting extends React.Component {
 //   const { currentUser, logout } = this.props;
 //}
@@ -16,8 +16,8 @@ const Greeting = ({ currentUser, logout }) => {
 
     const loggedIn = () => (
         <hgroup className="header-group">
-            <h2 className="header-name">{currentUser.first_name}{currentUser.last_name}</h2>
-            <button className="header-button" onClick={logout}>Log Out</button>
+            <h2 className="current-user">Welcome {currentUser.first_name} {currentUser.last_name}</h2>
+            <button className="log-out-button" onClick={logout}>Log Out</button>
         </hgroup>
     );
 

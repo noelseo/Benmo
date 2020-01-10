@@ -38,17 +38,20 @@ class SessionForm extends React.Component {
                 <form className="auth-form" onSubmit={this.handleSubmit}>
                     <div className="inputs">
 
-                        <label className="error auth-form-input-label first-last-name first-name">
-                            <span className="label-text">FIRST NAME</span>
-                            <input className="auth-form-input" type="text" value={this.state.first_name} onChange={this.update('first_name')} placeholder="Jane"/>
-                            <span className="error-text">Required</span>
-                        </label>
+                        <div className="jon">
+                            <label className="error auth-form-input-label first-last-name first-name">
+                                <span className="label-text">FIRST NAME</span>
+                                <input className="auth-form-input" type="text" value={this.state.first_name} onChange={this.update('first_name')} placeholder="Jane"/>
+                                <span className="error-text">Required</span>
+                            </label>
+                        
+                            <label className="error auth-form-input-label first-last-name last-name">
+                                <span className="label-text">LAST NAME</span>
+                                <input className="auth-form-input" type="text" value={this.state.last_name} onChange={this.update('last_name')} placeholder="Smith"/>
+                                <span className="error-text">Required</span>
+                            </label>
+                        </div>
 
-                        <label className="error auth-form-input-label first-last-name last-name">
-                            <span className="label-text">LAST NAME</span>
-                            <input className="auth-form-input" type="text" value={this.state.last_name} onChange={this.update('last_name')} placeholder="Smith"/>
-                            <span className="error-text">Required</span>
-                        </label>
                         
 
                         <label className="auth-form-input-label email">
