@@ -15,7 +15,7 @@ import Main from './main/main'
 
 const App = () => (
     <div>
-        {/* <Route path="/" component={GreetingContainer} /> */}
+        <Route path="/" component={GreetingContainer}/>
         <Route exact path="/" component={Main} />
         <AuthRoute path="/sign-in" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />

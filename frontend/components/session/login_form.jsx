@@ -22,7 +22,8 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="auth-signin">
+
                 <div className="login-error-message">
                     {this.renderErrors()}
                 </div>
@@ -33,28 +34,34 @@ class LoginForm extends React.Component {
                     </div>
 
                     <form className="auth-form" onSubmit={this.handleSubmit}>
+
                         <div className="inputs">
 
-                            <label className="a">
-                                <span className="a1">EMAIL</span>
-                                <input className="email" type="text" value={this.state.email} onChange={this.update('email')}/>
-                                <span className="a2">Required</span>
+                            <label className="login-label">
+                                <span className="login-span">EMAIL</span>
+                                <input className="login-input" type="text" value={this.state.email} onChange={this.update('email')}/>
+                                {/* <span className="a2">Required</span> */}
                             </label>
 
-                            <label className="b">
-                                <span className="b1">PASSWORD</span>
-                                <input className="password" type="password" value={this.state.password} onChange={this.update('password')} placeholder="••••••••"/>
-                                <span className="b2">Required</span>
+                            <label className="login-label">
+                                <span className="login-span">PASSWORD</span>
+                                <input className="login-input" type="password" value={this.state.password} onChange={this.update('password')} placeholder="••••••••"/>
+                                {/* <span className="b2">Required</span> */}
                             </label>
 
-                            <input className="submit-button" type="submit"/>
-                            <br/>
-                            <br/>
-                            <button onClick={this.handleDemo} className="demo-button" id="demo-login">Demo Sign In</button>
+                            <div className="bottom">
+                                <button onClick={this.handleDemo} className="demo-button" id="demo-login">Demo Sign In</button>
+                                <br/>
+                                <br/>
+                                <input className="submit-button" type="submit"/>
+                            </div>
+
                         </div>
+
                     </form>
 
                 </div>
+
             </div>
 
         );

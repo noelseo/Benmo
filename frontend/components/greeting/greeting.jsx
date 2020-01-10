@@ -13,7 +13,6 @@ const Greeting = ({ currentUser, logout }) => {
         <nav className="greeting-bar">
             <img className="benmologo" src={window.benmologo} />
             <Link className="sign-in-button" to="/sign-in">Sign In</Link>
-            {/* <Link to="/signup">Sign Up</Link> */}
         </nav>
     );
 
