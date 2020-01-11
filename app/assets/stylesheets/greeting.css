@@ -4,8 +4,9 @@
 }
 
 .benmologo {
-    margin-left: 20px;
+    margin-left: 170px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .current-user {
@@ -26,7 +27,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    margin-right: 20px;
+    margin-right: 170px;
     margin-top: 40px;
 }
 

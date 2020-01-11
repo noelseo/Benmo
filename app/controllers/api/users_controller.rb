@@ -2,8 +2,10 @@ class Api::UsersController < ApplicationController
 
     def create
         @user = User.new(user_params)
-        @user.username = @user.first_name[0] + '-' + @user.last_name[0] + '-' +(User.last.id + 1).to_s
+        
         if @user.save
+            @user.username = @user.first_name[0] + '-' + @user.last_name[0] + '-' +(User.last.id + 1).to_s
+            @user.save
             login(@user)
             render "api/users/show"
         else

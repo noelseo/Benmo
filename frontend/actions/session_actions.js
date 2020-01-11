@@ -17,10 +17,12 @@ const logoutCurrentUser = () => ({
     type: 'LOGOUT_CURRENT_USER'
 })
 
-const receiveErrors = (errors) => ({
-    type: 'RECEIVE_SESSION_ERRORS',
+export const receiveErrors = (errors) => ({
+    type: RECEIVE_SESSION_ERRORS,
     errors
 })
+
+
 
 // signup(user)(thunk action creator)
 // login(user)(thunk action creator)
@@ -29,7 +31,7 @@ export const signup = (user) => dispatch => (
     SessionApiUtil.createUser(user)
         .then(
             (user) => dispatch(receiveCurrentUser(user)),
-            (errors) => dispatch(receiveErrors(errors.responseJSON))
+            (errors) => { return dispatch(receiveErrors(errors.responseJSON)) } //dispatches the action to the store, reducer picks it up from the store
             )
 )
 
