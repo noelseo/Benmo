@@ -21,9 +21,20 @@ class LoginForm extends React.Component {
             .then(() => this.props.history.push('/'));
     }
 
+    //clear the errors
     componentDidMount() {
         this.props.clearSessionErrors();
     }
+
+    //errors (refer to controllers)
+    renderErrors() {
+        return (this.props.errors.map((error, i) => ( //error returns an array
+            <div className="error-div">
+                <div key={`error-${i}`} className="login-error">{error}</div>
+            </div>
+        )))
+    }
+
 
     render() {
         return (
@@ -77,16 +88,6 @@ class LoginForm extends React.Component {
 
         );
     }
-
-    //errors (refer to controllers)
-    renderErrors() {
-        return (this.props.errors.map((error, i) => ( //error returns an array
-            <div className="error-div">
-                <div key={`error-${i}`} className="login-error">{ error }</div>
-            </div>
-        )))
-    }
-
 
     //demo login
     demo(user) {
