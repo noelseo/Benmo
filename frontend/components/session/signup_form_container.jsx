@@ -8,7 +8,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-    processForm: (user) => dispatch(SessionActions.signup(user))
+    processForm: (user) => dispatch(SessionActions.signup(user)),
+    clearSessionErrors: () => dispatch(SessionActions.clearSessionErrors())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);

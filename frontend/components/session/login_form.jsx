@@ -21,6 +21,10 @@ class LoginForm extends React.Component {
             .then(() => this.props.history.push('/'));
     }
 
+    componentDidMount() {
+        this.props.clearSessionErrors();
+    }
+
     render() {
         return (
             <div>

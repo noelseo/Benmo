@@ -31,6 +31,11 @@ class SessionForm extends React.Component {
         )))
     }
 
+    //to clear the errors
+    componentDidMount() {
+        this.props.clearSessionErrors();
+    }
+
     render() {
         return (
             <div>

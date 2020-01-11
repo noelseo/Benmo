@@ -8,7 +8,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-    processForm: (user) => dispatch(SessionActions.login(user))
+    processForm: (user) => dispatch(SessionActions.login(user)),
+    clearSessionErrors: () => dispatch(SessionActions.clearSessionErrors())
 }); 
 
 //when LoginForm calls processForm, session_reducer.js grabs the action from session_actions.js
