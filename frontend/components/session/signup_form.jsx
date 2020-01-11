@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -25,71 +27,77 @@ class SessionForm extends React.Component {
 
     render() {
         return (
-            <div className="auth-signup">
+            <div>
+                <Link to="/">
+                    <img className="benmologo" src={window.benmologo} />
+                </Link>
+                <div className="auth-signup">
 
-                <div className="auth-header-text">
-                    <h1>Create your account</h1>
-                    <br/>
-                    <br/>
-                    
-                    <button className="facebook-button" onClick={this.facebookButton}>
-                        <span className="facebook-logo"></span>
-                        <span className="facebook-text">Sign Up with Facebook</span>
-                    </button>
-                </div>
-
-                <form className="auth-form" onSubmit={this.handleSubmit}>
-
-                    <div className="inputs">
-
-                        <div className="fullname">
-                            <label className="error auth-form-input-label first-last-name first-name">
-                                <span className="label-text">FIRST NAME</span>
-                                <input className="auth-form-input" type="text" value={this.state.first_name} onChange={this.update('first_name')} placeholder="Jane"/>
-                                {/* <span className="error-text">Required</span> */}
-                            </label>
+                    <div className="auth-header-text">
+                        <h1>Create your account</h1>
+                        <br/>
+                        <br/>
                         
-                            <label className="error auth-form-input-label first-last-name last-name">
-                                <span className="label-text">LAST NAME</span>
-                                <input className="auth-form-input" type="text" value={this.state.last_name} onChange={this.update('last_name')} placeholder="Smith"/>
+                        <button className="facebook-button" onClick={this.facebookButton}>
+                            <span className="facebook-logo"></span>
+                            <span className="facebook-text">Sign Up with Facebook</span>
+                        </button>
+                    </div>
+
+                    <form className="auth-form" onSubmit={this.handleSubmit}>
+
+                        <div className="inputs">
+
+                            <div className="fullname">
+                                <label className="error auth-form-input-label first-last-name first-name">
+                                    <span className="label-text">FIRST NAME</span>
+                                    <input className="auth-form-input" type="text" value={this.state.first_name} onChange={this.update('first_name')} placeholder="Jane"/>
+                                    {/* <span className="error-text">Required</span> */}
+                                </label>
+                            
+                                <label className="error auth-form-input-label first-last-name last-name">
+                                    <span className="label-text">LAST NAME</span>
+                                    <input className="auth-form-input" type="text" value={this.state.last_name} onChange={this.update('last_name')} placeholder="Smith"/>
+                                    {/* <span className="error-text">Required</span> */}
+                                </label>
+                            </div>
+
+                            
+
+                            <label className="auth-form-input-label email">
+                                <span className="label-text">EMAIL</span>
+                                <input className="auth-form-input" type="text" value={this.state.email} onChange={this.update('email')} placeholder="email@example.com"/>
                                 {/* <span className="error-text">Required</span> */}
                             </label>
+
+                            <label className="auth-form-input-label phone">
+                                <span className="label-text">PHONE</span>
+                                <input className="auth-form-input" type="tel" value={this.state.phone_number} onChange={this.update('phone_number')} placeholder="(234)567-8901"/>
+                                {/* <span className="error-text">Required</span> */}
+                            </label>
+
+                            <label className="auth-form-input-label password">
+                                <span className="label-text">PASSWORD</span>
+                                <input className="auth-form-input" type="password" value={this.state.password} onChange={this.update('password')} placeholder="••••••••" />
+                                {/* <span className="error-text">Required</span> */}
+                            </label>
+
                         </div>
 
+                        <div className="bottom">
+                            <a href="https://venmo.com/legal/us-helpful-information" className="helpful-info">Helpful Information</a>
+
+                            <input className="sign-up-button" type="submit" value="Sign Up"/>
+                        </div>
                         
+                        <div className="footer">
+                            <p>
+                                By submitting, you confirm that you are authorized to use the number entered and agree to receive SMS texts to verify you own the number. Carrier fees may apply.
+                            </p>
+                        </div>
+                    </form>
 
-                        <label className="auth-form-input-label email">
-                            <span className="label-text">EMAIL</span>
-                            <input className="auth-form-input" type="text" value={this.state.email} onChange={this.update('email')} placeholder="email@example.com"/>
-                            {/* <span className="error-text">Required</span> */}
-                        </label>
-
-                        <label className="auth-form-input-label phone">
-                            <span className="label-text">PHONE</span>
-                            <input className="auth-form-input" type="tel" value={this.state.phone_number} onChange={this.update('phone_number')} placeholder="(234)567-8901"/>
-                            {/* <span className="error-text">Required</span> */}
-                        </label>
-
-                        <label className="auth-form-input-label password">
-                            <span className="label-text">PASSWORD</span>
-                            <input className="auth-form-input" type="password" value={this.state.password} onChange={this.update('password')} placeholder="••••••••" />
-                            {/* <span className="error-text">Required</span> */}
-                        </label>
-
-                    </div>
-
-                    <div className="bottom">
-                        <a href="https://venmo.com/legal/us-helpful-information" className="helpful-info">Helpful Information</a>
-
-                        <input className="sign-up-button" type="submit" value="Sign Up"/>
-                    </div>
-                    
-                    <div className="footer">
-                        <p>
-                            By submitting, you confirm that you are authorized to use the number entered and agree to receive SMS texts to verify you own the number. Carrier fees may apply.
-                        </p>
-                    </div>
-                </form>
+                </div>
 
             </div>
         );

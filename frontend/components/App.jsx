@@ -10,15 +10,16 @@ import {
     Link,
     HashRouter
 } from 'react-router-dom';
-import Main from './main/main'
 
 
 const App = () => (
     <div>
-        <Route path="/" component={GreetingContainer}/>
-        <Route exact path="/" component={Main} />
-        <AuthRoute path="/sign-in" component={LoginFormContainer} />
-        <AuthRoute path="/signup" component={SignupFormContainer} />
+        <Switch>
+            <Route exact path="/" component={GreetingContainer} />
+            <AuthRoute path="/sign-in" component={LoginFormContainer} />
+            <AuthRoute path="/signup" component={SignupFormContainer} />
+            <Redirect to="/" />
+        </Switch>
     </div>
 );
 

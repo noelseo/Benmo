@@ -8,7 +8,9 @@ const SessionReducer = (oldState = { id: null }, action) => { //grabs the approp
 
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            return { id: action.currentUser.id }; 
+            // return { id: action.currentUser.id }; 
+            return { id: Object.keys(action.currentUser)[0] }; 
+            //refer to show.json.jbuilder, _user.json.jbuilder, users_reducer.js
 
         case LOGOUT_CURRENT_USER:
             return { id: null };

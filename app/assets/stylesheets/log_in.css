@@ -70,6 +70,12 @@
     padding: 20px;
 }
 
+.login-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 .submit-button {
     background-color: #bcc2cc;
     border: none;

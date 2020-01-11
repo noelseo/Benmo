@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -22,43 +23,49 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-            <div className="auth-signin">
+            <div>
+                <Link to="/">
+                    <img className="benmologo" src={window.benmologo} />
+                </Link>
 
-                <div className="login-error-message">
-                    {this.renderErrors()}
-                </div>
+                <div className="auth-signin">
 
-                <div className="auth-login">
-                    <div className="auth-header-text">
-                        <h1>Sign in to Benmo</h1>
+                    <div className="login-error-message">
+                        {this.renderErrors()}
                     </div>
 
-                    <form className="auth-form" onSubmit={this.handleSubmit}>
-
-                        <div className="inputs">
-
-                            <label className="login-label">
-                                <span className="login-span">EMAIL</span>
-                                <input className="login-input" type="text" value={this.state.email} onChange={this.update('email')}/>
-                                {/* <span className="a2">Required</span> */}
-                            </label>
-
-                            <label className="login-label">
-                                <span className="login-span">PASSWORD</span>
-                                <input className="login-input" type="password" value={this.state.password} onChange={this.update('password')} placeholder="••••••••"/>
-                                {/* <span className="b2">Required</span> */}
-                            </label>
-
-                            <div className="bottom">
-                                <button onClick={this.handleDemo} className="demo-button" id="demo-login">Demo Sign In</button>
-                                <br/>
-                                <br/>
-                                <input className="submit-button" type="submit"/>
-                            </div>
-
+                    <div className="auth-login">
+                        <div className="auth-header-text">
+                            <h1>Sign in to Benmo</h1>
                         </div>
 
-                    </form>
+                        <form className="auth-form" onSubmit={this.handleSubmit}>
+
+                            <div className="inputs">
+
+                                <label className="login-label">
+                                    <span className="login-span">EMAIL</span>
+                                    <input className="login-input" type="text" value={this.state.email} onChange={this.update('email')}/>
+                                    {/* <span className="a2">Required</span> */}
+                                </label>
+
+                                <label className="login-label">
+                                    <span className="login-span">PASSWORD</span>
+                                    <input className="login-input" type="password" value={this.state.password} onChange={this.update('password')} placeholder="••••••••"/>
+                                    {/* <span className="b2">Required</span> */}
+                                </label>
+
+                                <div className="login-bottom">
+                                    <input className="submit-button" type="submit"/>
+                                    <br/>
+                                    <button onClick={this.handleDemo} className="demo-button" id="demo-login">Demo Sign In</button>
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
 
                 </div>
 
