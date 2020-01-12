@@ -150,3 +150,7 @@
     margin: 0 auto;
     text-align: center;
 }
+
+::placeholder {
+    color: #bcc2cc;
+}

@@ -107,3 +107,7 @@
 .demo-button:hover {
     background-color: #3d95ce;
 }
+
+::placeholder {
+    color: #bcc2cc;
+}

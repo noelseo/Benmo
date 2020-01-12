@@ -98,12 +98,14 @@ class SessionForm extends React.Component {
 
                         <div className="bottom">
                             <a href="https://venmo.com/legal/us-helpful-information" className="helpful-info">Helpful Information</a>
-
+                            
                             <input className="sign-up-button" type="submit" value="Sign Up"/>
                         </div>
                         
                         <div className="footer">
                             <p>
+                                <br/>
+                                <br/>
                                 By submitting, you confirm that you are authorized to use the number entered and agree to receive SMS texts to verify you own the number. Carrier fees may apply.
                             </p>
                         </div>
