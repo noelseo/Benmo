@@ -1,0 +1,57 @@
+.profile {
+    width: 265px;
+    height: 134px;
+    right: 0;
+    text-align: left;
+    font: 13px Helvetica, Arial, sans-serif;
+    position: absolute;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #a6a6a6;
+    background: #fff;
+    margin: 20 0 0 20;
+    padding: 0;
+    border: 1 0 0 1;
+    outline: 0;
+    display: block;
+}
+
+.fullname {
+    color: #3d95ce;
+    font: 13px Helvetica, Arial, sans-serif;
+    float: left;
+    width: 130px;
+    padding: 10px;
+    padding-top: 21px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+}
+
+.gray_bottom_divider {
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.balance {
+    font: 13px Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+    float: left;
+    margin-right: 10px;
+    width: 75px;
+}
+
+.funding {
+    color: #3d95ce;
+    font: 13px Helvetica, Arial, sans-serif;
+    float: left;
+    width: 130px;
+    padding: 10px;
+    padding-top: 21px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+}

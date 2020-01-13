@@ -1,0 +1,102 @@
+.navbar-box-outer {
+    width: 100vw; 
+    background-color: #3C95D2;
+}
+
+.navbar-box {
+    /* width: 100vw; */
+    min-height: 47px;
+
+    line-height: 47px;
+    height: 47px;
+    display: flex;
+    max-width: 62vw;
+    justify-content: center;
+    margin: auto;
+}
+
+.navbar-box-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+
+.benmologo-navbar {
+    /* float: left; */
+    padding-top: 6px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.navbar-text {
+    float: right;
+    background-color: #3C95D2;
+    padding: 0px 7px;
+    font: 13px Helvetica, Arial, sans-serif;
+    /* display: inline-block; */
+    text-decoration: none;
+    text-shadow: 0 1px 0 #1B567F;
+    color: #FFF;
+    line-height: 47px;
+    cursor: pointer;
+    background: transparent;
+}
+
+    .navbar-text:hover {
+        background-color: #50a9e6;
+    }
+
+.navbar-home {
+    float: right;
+    background-color: #3C95D2;
+    padding: 0px 7px;
+    font: 13px Helvetica, Arial, sans-serif;
+    /* display: inline-block; */
+    text-decoration: none;
+    text-shadow: 0 1px 0 #1B567F;
+    color: #FFF;
+    line-height: 47px;
+    cursor: pointer;
+    background: transparent;
+}
+
+    .navbar-home:hover {
+        background-color: #50a9e6;
+    }
+
+.navbar-fullname {
+    float: right;
+    background-color: #3C95D2;
+    padding: 0px 7px;
+    font: 13px Helvetica, Arial, sans-serif;
+    /* display: inline-block; */
+    text-decoration: none;
+    text-shadow: 0 1px 0 #1B567F;
+    color: #FFF;
+    line-height: 47px;
+    cursor: pointer;
+    background: transparent;
+}
+
+    .navbar-fullname:hover {
+        background-color: #50a9e6;
+    }
+
+.navbar-logout-button {
+    float: right;
+    background-color: #3C95D2;
+    padding: 0px 7px;
+    font: 13px Helvetica, Arial, sans-serif;
+    /* display: inline-block; */
+    text-decoration: none;
+    text-shadow: 0 1px 0 #1B567F;
+    color: #FFF;
+    line-height: 47px;
+    cursor: pointer;
+    background: transparent;
+}
+
+    .navbar-logout-button:hover {
+        background-color: #50a9e6;
+    }

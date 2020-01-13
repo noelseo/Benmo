@@ -1,5 +1,5 @@
 import React from 'react';
-import GreetingContainer from './greeting/greeting_container';
+import HomeContainer from './home/home_container';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import { AuthRoute } from '../util/route_util';
@@ -13,9 +13,9 @@ import {
 
 
 const App = () => (
-    <div>
+    <div className="app-jsx">
         <Switch>
-            <Route exact path="/" component={GreetingContainer} />
+            <Route exact path="/" component={HomeContainer} />
             <AuthRoute path="/sign-in" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
             

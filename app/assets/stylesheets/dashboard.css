@@ -1,0 +1,78 @@
+.dashboard-top {
+    width: 918px;
+    min-height: 47px;
+    background-color: #3C95D2;
+    line-height: 47px;
+    height: 47px;
+}
+
+.dashboard-bottom {
+    background-color: #EEF0F4;
+    width: 62vw;
+    display: flex;    
+    
+    margin: 0 auto;
+    text-align: left;
+    flex-direction: row;
+}
+
+.dashboard-left {
+    float: left;
+    width: 637px;
+    text-align: left;
+    font: 13px Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+
+    height: 2265px;
+    display: flex;
+    flex-direction: column;
+    width: 632px;
+}
+
+    .pay-box {
+        border: 1px solid #bbb;
+        width: 632px;
+        margin-bottom: 20px;
+        background: #fff;
+        margin-left: 0px;
+        height: 112px;
+        padding: 10px 20px;
+    }
+
+    .friend-request-box {
+        width: 632px;
+        height: 106px;
+        border: 1px solid #bbb;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        background: #fff;
+    }
+
+    .transaction-history-box {
+        width: 634px;
+        height: 1962px;
+        border: 1px solid #bbb;
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        background: #fff;
+    }
+
+
+.dashboard-right {
+    width: 265px;
+    height: 484px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .profile-box {
+        border: 1px solid #bbb;
+        padding: 10px;
+        background: #fff;
+    }
+
+    .friends-box {
+        border: 1px solid #bbb;
+        padding: 10px;  
+        background: #fff;
+    }

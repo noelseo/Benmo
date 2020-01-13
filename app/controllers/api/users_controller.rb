@@ -5,6 +5,7 @@ class Api::UsersController < ApplicationController
         
         if @user.save
             @user.username = @user.first_name[0] + '-' + @user.last_name[0] + '-' +(User.last.id + 1).to_s
+            @user.balance = 0.00
             @user.save
             login(@user)
             render "api/users/show"
