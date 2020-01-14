@@ -27,4 +27,9 @@ class ApplicationController < ActionController::Base
     def logged_in?
         !!current_user
     end
+
+    def add_funds(amount)
+        @user = @current_user.id
+        @user.balance += 100.00
+    end
 end

@@ -7,7 +7,7 @@
 #  last_name       :string           not null
 #  email           :string           not null
 #  phone_number    :string           not null
-#  username        :string           not null
+#  username        :string
 #  balance         :float
 #  password_digest :string           not null
 #  session_token   :string           not null
@@ -19,6 +19,14 @@ class User < ApplicationRecord
     validates :first_name, :last_name, :email, :phone_number, :password_digest, presence: true
     validates :email, :phone_number, :username, :session_token, uniqueness: true
     validates :password, length: { minimum: 8, allow_nil: true }
+
+    has_many :sent_transactions,
+        foreign_key: :sender_id,
+        class_name: :Transaction
+
+    has_many :received_transactions,
+        foreign_key: :receiver_id,
+        class_name: :Transaction
 
     before_validation :ensure_session_token
     attr_reader :password

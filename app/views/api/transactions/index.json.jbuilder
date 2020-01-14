@@ -1,0 +1,2 @@
+json.received_transactions @received_transactions, partial: 'api/transactions/transaction', as: :transaction
+json.sent_transactions @sent_transactions, partial: 'api/transactions/transaction', as: :transaction

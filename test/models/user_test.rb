@@ -7,7 +7,7 @@
 #  last_name       :string           not null
 #  email           :string           not null
 #  phone_number    :string           not null
-#  username        :string           not null
+#  username        :string
 #  balance         :float
 #  password_digest :string           not null
 #  session_token   :string           not null

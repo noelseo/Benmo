@@ -1,6 +1,7 @@
 import React from 'react';
 import ProfileContainer from './profile/profile_container';
 import NavbarContainer from './navbar/navbar_container';
+import TransactionHistory from './transaction_history/transaction_history';
 
 
 class Dashboard extends React.Component {
@@ -17,7 +18,12 @@ class Dashboard extends React.Component {
                     <div className="dashboard-left">
                         <div className="pay-box">Pay</div>
                         <div className="friend-request-box">FriendRequest</div>
-                        <div className="transaction-history-box">TransactionHistory</div>
+                        <div className="transaction-history-box">TransactionHistory
+                            <div>
+                                <TransactionHistory />
+                            </div>
+                        </div>
+
                     </div>
                     
                     <div className="dashboard-right">
