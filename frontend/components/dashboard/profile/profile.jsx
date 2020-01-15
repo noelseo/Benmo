@@ -1,5 +1,4 @@
 import React from 'react';
-import TransactionHistoryContainer from '../transaction_history/transaction_history_container'
 
 class Profile extends React.Component {
     render() {

@@ -19,3 +19,15 @@ export const fetchAll = (user) => dispatch => (  //this gets used in transaction
             (errors) => { return dispatch(receiveErrors(errors.responseJSON)) }
         )
 )
+
+
+//------------------------------------------
+import { SessionApiUtil } from '../util/session_api_util';
+
+export const RECEIVE_USER = 'RECEIVE_USER';
+export const fetchUser = (userId) => dispatch => (
+    SessionApiUtil.fetchUser(userId)
+        .then(
+            (userId) => dispatch({ type: RECEIVE_USER, userId })
+        )
+)

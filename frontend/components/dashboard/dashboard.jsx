@@ -45,13 +45,13 @@ class Dashboard extends React.Component {
 
                         <div className="dashboard-bottom-left">
                             <div className="dashboard-pay-box">Pay</div>
-                            <div className="dashboard-friend-request-box">FriendRequest</div>
-                            <div className="dashboard-transaction-history-box">TransactionHistory
-                                <div>
-                                    <TransactionHistoryContainer />
-                                </div>
+                            <div className="dashboard-friend-request-box">
+                                <div className="dashboard-friend-request-box-inner">Friend Requests</div>
                             </div>
-
+                            <div className="dashboard-transaction-history-box">
+                                <div className="dashboard-transaction-history-box-inner">Transaction History</div> 
+                                <TransactionHistoryContainer />
+                            </div>
                         </div>
 
                         <div className="dashboard-bottom-right">

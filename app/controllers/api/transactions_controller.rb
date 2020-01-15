@@ -20,8 +20,15 @@ class Api::TransactionsController < ApplicationController
     end
 
     def index           
+        # Below retrieves the current user's transactions
+        # @transactions = Transaction.where('sender_id = :id or receiver_id = :id', { id: current_user.id }).order(created_at: :desc)
+
         # BETTER WAY
-        @transactions = Transaction.where('sender_id = :id or receiver_id = :id', { id: current_user.id }).order(created_at: :desc)
+        # Below retrieves the transactions for the selected user
+        
+        @transactions = Transaction.where('sender_id = :id or receiver_id = :id', { id: params[:user_id] }).order(created_at: :desc)
+
+        
         
         # ALTERNATE WAY
         # @sent_transactions = User.find(params[:user_id]).sent_transactions #used associations from the transaction model

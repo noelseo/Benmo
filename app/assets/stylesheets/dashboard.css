@@ -106,15 +106,32 @@
     margin-bottom: 20px;
     background: #fff;
 }
+    .dashboard-friend-request-box-inner {
+        border-bottom: 1px solid #e9e9e9;
+        font-size: 15px;
+        padding: 10px;
+        color: #666;
+        font-weight: bold;
+    }
 
 .dashboard-transaction-history-box {
     width: 632px;
-    height: 1962px;
+    height: 100%;
     border: 1px solid #bbb;
     margin-bottom: 20px;
     padding: 10px 20px;
     background: #fff;
+    border-bottom: 1px solid #e9e9e9;
+    padding: 20px;
 }
+
+    .dashboard-transaction-history-box-inner {
+        border-bottom: 1px solid #e9e9e9;
+        font-size: 15px;
+        padding: 10px;
+        color: #666;
+        font-weight: bold;
+    }
 
 
 .dashboard-bottom-right {

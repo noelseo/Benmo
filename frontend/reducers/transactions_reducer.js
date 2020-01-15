@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_TRANSACTIONS } from '../actions/transaction_actions';
+import { RECEIVE_ALL_TRANSACTIONS, RECEIVE_USER } from '../actions/transaction_actions';
 
 const TransactionsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);

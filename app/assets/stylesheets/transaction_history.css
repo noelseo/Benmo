@@ -1,0 +1,63 @@
+.transaction-history-box {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+}
+
+.transaction-history {
+    display: flex;
+    border-bottom: 1px solid #e9e9e9;
+    padding: 20px;
+    justify-content: center;
+}
+
+.transaction-history-middle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.transaction-history-left {
+    float: left;
+    width: 400px;
+}
+
+.transaction-history-right {
+    float: right;
+}
+
+.transaction-history-names {
+    color: #545d66;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 5px;
+}
+
+#paid {
+    color: #6a757f;
+    font-weight: 300;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.transaction-history-date {
+    color: #6a757f;
+    font-size: 11px;
+    line-height: 16px;
+}
+
+.transaction-history-amount {
+    color: #61a414;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.transaction-history-amount-minus {
+    color:#d0011b;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+}
