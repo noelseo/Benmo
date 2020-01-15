@@ -7,6 +7,10 @@ const RootReducer = combineReducers({
     entities: EntitiesReducer,
     session: SessionReducer,
     errors: ErrorsReducer
-});
+}); 
+
+//this builds our store/state structure
+//this shows as state in the developer tool
+
 
 export default RootReducer;

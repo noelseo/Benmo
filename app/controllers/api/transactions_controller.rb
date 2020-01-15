@@ -19,9 +19,13 @@ class Api::TransactionsController < ApplicationController
         @transaction = Transaction.find(params[:id])
     end
 
-    def index   
-        @sent_transactions = User.find(params[:user_id]).sent_transactions #used associations from the transaction model
-        @received_transactions = User.find(params[:user_id]).received_transactions
+    def index           
+        # BETTER WAY
+        @transactions = Transaction.where('sender_id = :id or receiver_id = :id', { id: current_user.id }).order(created_at: :desc)
+        
+        # ALTERNATE WAY
+        # @sent_transactions = User.find(params[:user_id]).sent_transactions #used associations from the transaction model
+        # @received_transactions = User.find(params[:user_id]).received_transactions
 
         # @transactions = @sent_transactions.concat(@received_transactions).sort_by do |transaction|
         #     transaction.created_at

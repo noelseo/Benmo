@@ -2,15 +2,20 @@ import * as TransactionApiUtil from '../util/transaction_api_util';
 
 export const RECEIVE_ALL_TRANSACTIONS = 'RECEIVE_ALL_TRANSACTIONS';
 
-const receiveAllTransactions = (transactions) => ({
-    type: 'RECEIVE_ALL_TRANSACTIONS',
-    transactions 
+//ACTION
+const receiveAllTransactions = ({ transactions }) => ({ //take the ajax object as an arg
+    type: RECEIVE_ALL_TRANSACTIONS, //reducer listens 
+    transactions: transactions
 })
 
-export const getAll = (user) => dispatch => (
+export const fetchAll = (user) => dispatch => (  //this gets used in transaction_history.jsx
     TransactionApiUtil.receiveAllTransactions(user)
         .then(
-            (transactions) => dispatch(receiveAllTransactions(transactions)),
+            (transactions) => dispatch(receiveAllTransactions(transactions)), 
+            //same as dispatch({ type: RECEIVE_ALL_TRANSACTIONS, transactions }) 
+            //'transactions' is the ajax object received from 'transaction_api_util.js'
+        
+
             (errors) => { return dispatch(receiveErrors(errors.responseJSON)) }
         )
 )

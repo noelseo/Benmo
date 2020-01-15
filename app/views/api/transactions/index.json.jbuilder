@@ -1,2 +1,9 @@
-json.received_transactions @received_transactions, partial: 'api/transactions/transaction', as: :transaction
-json.sent_transactions @sent_transactions, partial: 'api/transactions/transaction', as: :transaction
+json.transactions do 
+
+    @transactions.each do |transaction|
+        json.set! transaction.id do
+            json.partial! 'api/transactions/transaction', transaction: transaction
+        end
+    end 
+
+end

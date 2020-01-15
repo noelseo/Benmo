@@ -28,6 +28,14 @@ class User < ApplicationRecord
         foreign_key: :receiver_id,
         class_name: :Transaction
 
+    has_many :receivers,
+        through: :sent_transactions,
+        source: :receiver
+
+    has_many :senders,
+        through: :received_transactions,
+        source: :sender
+
     before_validation :ensure_session_token
     attr_reader :password
 

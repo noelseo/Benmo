@@ -5,22 +5,12 @@ class Profile extends React.Component {
     render() {
         const { currentUser } = this.props;
         return (
-            <div className="profile">
 
-                <div className="name-part">
-                    <h3 className="profile-fullname">{currentUser.first_name} {currentUser.last_name}</h3>
-                </div>
-                <br/>
+            <div className="profile-box">
 
-                <div className="gray_bottom_divider"></div>
-                <br/>
-
-                <div className="balance-and-funding-part">
-                    <h6 className="balance">${currentUser.balance}</h6>
-                    <a href="#" className="funding">Get Ready to Pay »</a>
-                </div>
-
-                <TransactionHistoryContainer />
+                <h3 className="profile-fullname">{currentUser.first_name} {currentUser.last_name}</h3>
+                <h6 className="balance">${currentUser.balance}</h6>
+                <a href="#" className="funding">Get Ready to Pay »</a>
 
             </div>
         );

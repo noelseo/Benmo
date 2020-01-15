@@ -1,23 +1,25 @@
 import React from 'react';
 
+
 class TransactionHistory extends React.Component {
 
-    // componentDidMount() {
-    //     this.props.getAll(this.props.currentUser)
-    // }
+    componentDidMount() {
+        this.props.fetchAll(this.props.currentUser)
+         //calls the 'fetchAll' function from the container that calls from transaction_actions.js
+    } 
 
     render() {
+        const { currentUser, transactions } = this.props;
 
-        const { currentUser } = this.props;
-        debugger
         return (
             <div>
-                <div>
-                    {/* {currentUser.transactions.map()} */}
-                </div>
+                <ul>
+                    {
+                        transactions.map((transaction, i) => <li key={i}>{transaction.created_at}</li>)
+                    }
+                </ul>
             </div>
         );
-    
     }
 }
 

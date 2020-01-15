@@ -7,7 +7,7 @@ const mapStateToProps = (state) => ({
     errors: state.errors.session
 })
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = (dispatch) => ({
     processForm: (user) => dispatch(SessionActions.login(user)),
     clearSessionErrors: () => dispatch(SessionActions.clearSessionErrors())
 }); 

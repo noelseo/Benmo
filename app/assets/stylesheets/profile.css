@@ -1,4 +1,4 @@
-.profile {
+/* .profile {
     width: 265px;
     height: 134px;
     right: 0;
@@ -14,42 +14,40 @@
     border: 1 0 0 1;
     outline: 0;
     display: block;
+} */
+
+.profile-box {
+    text-align: left;
+    margin-left: 15%;
 }
 
 .profile-fullname {
     color: #3d95ce;
-    font: 13px Helvetica, Arial, sans-serif;
+    font-size: 20px;
     float: left;
     width: 130px;
-    padding: 10px;
-    padding-top: 21px;
+    padding-top: 5px;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
     text-align: left;
 }
 
-.gray_bottom_divider {
-    border-bottom: 1px solid #e9e9e9;
-}
-
 .balance {
-    font: 13px Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    padding-top: 10px;
+    font-size: 20px;
     font-weight: bold;
-    text-align: right;
     float: left;
-    margin-right: 10px;
     width: 75px;
 }
 
 .funding {
+    font-size: 13px;
     color: #3d95ce;
-    font: 13px Helvetica, Arial, sans-serif;
     float: left;
     width: 130px;
-    padding: 10px;
-    padding-top: 21px;
+    padding-top: 10px;
+    padding-bottom: 15px;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
