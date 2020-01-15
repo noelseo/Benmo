@@ -1,6 +1,7 @@
 import * as TransactionApiUtil from '../util/transaction_api_util';
 
 export const RECEIVE_ALL_TRANSACTIONS = 'RECEIVE_ALL_TRANSACTIONS';
+export const CLEAR_TRANSACTIONS = 'CLEAR_TRANSACTIONS';
 
 //ACTION
 const receiveAllTransactions = ({ transactions }) => ({ //take the ajax object as an arg
@@ -21,13 +22,7 @@ export const fetchAll = (user) => dispatch => (  //this gets used in transaction
 )
 
 
-//------------------------------------------
-import { SessionApiUtil } from '../util/session_api_util';
-
-export const RECEIVE_USER = 'RECEIVE_USER';
-export const fetchUser = (userId) => dispatch => (
-    SessionApiUtil.fetchUser(userId)
-        .then(
-            (userId) => dispatch({ type: RECEIVE_USER, userId })
-        )
-)
+//to clear the errors
+export const clearTransactions = () => ({
+    type: CLEAR_TRANSACTIONS
+})

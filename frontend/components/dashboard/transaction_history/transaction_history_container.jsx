@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import TransactionHistory from './transaction_history';
-import { fetchAll, fetchUser } from '../../../actions/transaction_actions';
+import { fetchAll, clearTransactions } from '../../../actions/transaction_actions';
 
 
 const mSTP = ({ session, entities: { users, transactions } }) => {
@@ -34,8 +34,9 @@ const mSTP = ({ session, entities: { users, transactions } }) => {
 
 
 const mDTP = dispatch => ({
-    fetchAll: (user) => dispatch(fetchAll(user)) //fetchAll function comes from 'transaction_actions.js'
-}) //
+    fetchAll: (user) => dispatch(fetchAll(user)), //fetchAll function comes from 'transaction_actions.js'
+    clearTransactions: () => dispatch(clearTransactions())
+})
 
 export default connect(mSTP, mDTP)(TransactionHistory);
 
