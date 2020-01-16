@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_FRIENDS } from '../actions/friend_actions';
+import { RECEIVE_ALL_FRIENDS, CLEAR_FRIENDS } from '../actions/friend_actions';
 
 const FriendsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
@@ -12,6 +12,9 @@ const FriendsReducer = (oldState = {}, action) => {
             ))
 
             return newState;
+
+        case CLEAR_FRIENDS:
+            return {};
 
         default:
             return oldState;

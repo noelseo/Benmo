@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Friends from './friends';
-import { fetchAllFriends } from '../../../actions/friend_actions';
+import { fetchAllFriends, clearFriends } from '../../../actions/friend_actions';
 
 
 const mSTP = ({ session, entities: { users, friends } }) => {
@@ -12,7 +12,8 @@ const mSTP = ({ session, entities: { users, friends } }) => {
 
 
 const mDTP = dispatch => ({
-    fetchAllFriends: (user) => dispatch(fetchAllFriends(user))
+    fetchAllFriends: (user) => dispatch(fetchAllFriends(user)),
+    clearFriends: () => dispatch(clearFriends())
 })
 
 export default connect(mSTP, mDTP)(Friends);
