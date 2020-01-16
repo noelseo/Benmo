@@ -47,7 +47,7 @@ class Dashboard extends React.Component {
                         <div className="dashboard-bottom-left">
                             <div className="dashboard-pay-box">
                                 <div className="dashboard-pay-box-inner">Initiate Transactions</div>
-                                <div><Link>Pay</Link></div>
+                                <div className="dashboard-pay-div"><Link className="dashboard-pay-text">Pay</Link></div>
                             </div>
                             <div className="dashboard-friend-request-box">
                                 <div className="dashboard-friend-request-box-inner">Friend Requests</div>
