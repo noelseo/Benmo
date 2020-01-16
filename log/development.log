@@ -53813,3 +53813,13 @@ Completed 200 OK in 49ms (Views: 36.9ms | ActiveRecord: 5.3ms)
 Completed 200 OK in 150ms (Views: 70.8ms | ActiveRecord: 42.3ms)
 
 
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."id" != $1[0m  [["id", 9]]
+  [1m[35m (56.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE NOT (id is 9 or 8)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."id" != $1[0m  [["id", 9]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" != $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 11]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" != $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 11]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."first_name" = $1 LIMIT $2[0m  [["first_name", "Bank"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."id" != $1 AND "users"."id" != $2[0m  [["id", 9], ["id", 10]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."first_name" != $1 AND "users"."last_name" != $2[0m  [["first_name", "Ben"], ["last_name", "Mo"]]
