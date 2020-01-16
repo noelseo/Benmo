@@ -67,6 +67,7 @@
 .dashboard-bottom {
     display: flex;
     justify-content: center;
+    min-height: 100vh;
 }
 
 .dashboard-bottom-middle {

@@ -12,7 +12,9 @@ class Friends extends React.Component {
         return(
             <div>
                 {this.props.friends.map((friend, i) => (
-                    <Link><div key={i}>{friend.first_name} {friend.last_name}</div></Link>
+                    <div className="friends-each">
+                        <Link key={i} className="friends-fullname">{friend.first_name} {friend.last_name}</Link>
+                    </div>
                 ))}
             </div>
         )

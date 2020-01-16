@@ -1,0 +1,13 @@
+.friends-fullname {
+    color: #3d95ce;
+    font-weight: 500;
+    font-size: 14px;
+    padding-left: 10px; 
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.friends-each {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

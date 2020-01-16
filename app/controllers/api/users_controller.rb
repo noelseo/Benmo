@@ -5,7 +5,7 @@ class Api::UsersController < ApplicationController
         
         if @user.save
             @user.username = @user.first_name[0] + '-' + @user.last_name[0] + '-' +(User.last.id + 1).to_s
-            @user.balance = (rand(100.00..5000.00).round / 100.0)
+            @user.balance = rand(100.00..5000.00).to_f.round(2)
             @user.save
             login(@user)
             render "api/users/show"
