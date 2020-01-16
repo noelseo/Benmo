@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-bank = User.create({ first_name: 'Bank', last_name: 'Account', username: 'bank', email: 'bank@benmo.com', phone_number: '2930391029', password: 'safe', balance: 1000000.00 })
+bank = User.create({ first_name: 'Bank', last_name: 'Account', username: 'bank', email: 'bank@benmo.com', phone_number: '2930391029', password: 'safesafe', balance: 1000000.00 })
 
 ben = User.create({ first_name: 'Ben', last_name: 'Mo', username: 'b-h-13', email: 'benmo@benmo.com', phone_number: '4151234567', password: 'password', balance: 3723.58 })
 

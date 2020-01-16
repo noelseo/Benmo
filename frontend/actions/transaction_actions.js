@@ -2,6 +2,7 @@ import * as TransactionApiUtil from '../util/transaction_api_util';
 
 export const RECEIVE_ALL_TRANSACTIONS = 'RECEIVE_ALL_TRANSACTIONS';
 export const CLEAR_TRANSACTIONS = 'CLEAR_TRANSACTIONS';
+export const CREATE_A_TRANSACTION = 'CREATE_A_TRANSACTION';
 
 //ACTION
 const receiveAllTransactions = ({ transactions }) => ({ //take the ajax object as an arg
@@ -26,3 +27,11 @@ export const fetchAll = (user) => dispatch => (  //this gets used in transaction
 export const clearTransactions = () => ({
     type: CLEAR_TRANSACTIONS
 })
+
+export const createATransaction = (transaction) => (
+    TransactionApiUtil.createATransaction(transaction)
+        .then(
+            (transaction) => dispatch({ type: CREATE_A_TRANSACTION, transaction }),
+            (errors) => { return dispatch(receiveErrors(errors.responseJSON)) }
+        )
+)

@@ -2,17 +2,22 @@ class Api::TransactionsController < ApplicationController
 
     def create
         @transaction = Transaction.new(transaction_params)
-        @sender = current_user
-        @receiver = User.find(params[:receiver_id])
+        # @sender = current_user
+        # @receiver = User.find(params[:receiver_id])
 
-        if @transaction.save
-            @sender.balance -= :amount
-            @receiver.balance += :amount
-            render 'api/transactions/show'
+        if @transaction.save && (@transaction.sender.balance - @transaction.amount) >= 0
+            sender = @transaction.sender
+            receiver = @transaction.receiver
+            sender.balance -= @transaction.amount
+            receiver.balance += @transaction.amount
+            sender.save
+            receiver.save
+          
+            # @transactions = Transaction.where('sender_id = :id or receiver_id = :id', { id: params[:user_id] }).order(created_at: :desc)
+            redirect_to controller: 'transactions', action: 'index', user_id: params[:user_id]
         else
             render json: @transaction.errors.full_messages, status: 422
         end
-        
     end 
 
     def show
@@ -28,7 +33,6 @@ class Api::TransactionsController < ApplicationController
         
         @transactions = Transaction.where('sender_id = :id or receiver_id = :id', { id: params[:user_id] }).order(created_at: :desc)
 
-        
         
         # ALTERNATE WAY
         # @sent_transactions = User.find(params[:user_id]).sent_transactions #used associations from the transaction model

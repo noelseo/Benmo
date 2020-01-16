@@ -12,7 +12,6 @@
 
 class Transaction < ApplicationRecord
     validates :amount, :sender_id, :receiver_id, presence: true
-    # validate :sufficient_funds
 
     belongs_to :sender,
         foreign_key: :sender_id,
@@ -22,17 +21,12 @@ class Transaction < ApplicationRecord
         foreign_key: :receiver_id,
         class_name: :User
 
-    # def add_funds(amount)
-    #     @user = @current_user.id
-    #     @user.balance += 100.00
-    # end
-
-    # def sufficient_funds?
-    #     #sender
-    #     #if balance is greater, sender.balance - amount
-    #     # else throw an error / add from the bank
-    # end
-
-
+    def add_funds(amount)
+        @sender = bank
+        @receiver = @current_user
+        
+        @bank.balance -= 100.00
+        @receiver_id.balance += 100.00
+    end
 
 end

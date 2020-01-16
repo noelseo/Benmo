@@ -41,7 +41,7 @@ class TransactionHistory extends React.Component {
 
                                 <div className="transaction-history-right">
                                     
-                                        <p className={currentUser.id === transaction.sender_id ? "transaction-history-amount-minus" : "transaction-history-amount"}>{currentUser.id === transaction.sender_id ? "-" : ""}${transaction.amount.toFixed(2)}</p>
+                                        <p className={currentUser.id === transaction.sender_id ? "transaction-history-amount-minus" : "transaction-history-amount"}>{currentUser.id === transaction.sender_id ? "-" : "+"}${transaction.amount.toFixed(2)}</p>
                                 </div>
                             </div>
 

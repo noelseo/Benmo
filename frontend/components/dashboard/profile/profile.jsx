@@ -9,7 +9,7 @@ class Profile extends React.Component {
 
                 <h3 className="profile-fullname">{currentUser.first_name} {currentUser.last_name}</h3>
                 <h6 className="balance">${currentUser.balance}</h6>
-                <a href="#" className="funding">Get Ready to Pay »</a>
+                <a href="#" className="funding">Add More Funds »</a>
 
             </div>
         );

@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_TRANSACTIONS, CLEAR_TRANSACTIONS } from '../actions/transaction_actions';
+import { RECEIVE_ALL_TRANSACTIONS, CLEAR_TRANSACTIONS, CREATE_A_TRANSACTION } from '../actions/transaction_actions';
 
 const TransactionsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
@@ -16,8 +16,10 @@ const TransactionsReducer = (oldState = {}, action) => {
             return newState; 
 
         case CLEAR_TRANSACTIONS:
-
             return {};
+
+        // case CREATE_A_TRANSACTION:
+            
 
         default:
             return oldState;

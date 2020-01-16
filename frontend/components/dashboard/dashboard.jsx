@@ -2,6 +2,7 @@ import React from 'react';
 import ProfileContainer from './profile/profile_container';
 import NavbarContainer from './navbar/navbar_container';
 import TransactionHistoryContainer from './transaction_history/transaction_history_container';
+import FriendsContainer from './friends/friends_container';
 import { Link } from "react-router-dom";
 
 class Dashboard extends React.Component {
@@ -46,6 +47,7 @@ class Dashboard extends React.Component {
                         <div className="dashboard-bottom-left">
                             <div className="dashboard-pay-box">
                                 <div className="dashboard-pay-box-inner">Initiate Transactions</div>
+                                <div><Link>Pay</Link></div>
                             </div>
                             <div className="dashboard-friend-request-box">
                                 <div className="dashboard-friend-request-box-inner">Friend Requests</div>
@@ -60,6 +62,7 @@ class Dashboard extends React.Component {
                             <div className="dashboard-profile-box"><ProfileContainer /></div>
                             <div className="dashboard-friends-box">
                                 <div className="dashboard-friends-box-inner">Friends</div>
+                                <div><FriendsContainer /></div>
                             </div>
                         </div>
 

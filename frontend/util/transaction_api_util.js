@@ -5,13 +5,10 @@ export const receiveAllTransactions = (user) => {
     })
 } //returns an ajax object (json return value and etc)
 
-
-
-
-// export const createTransaction = (transaction) => {
-//     return $.ajax({
-//         url: `api/transactions`,
-//         method: 'POST',
-//         data: { transaction }
-//     })
-// }
+export const createATransaction = (transaction, user) => {
+    return $.ajax({
+        url: `api/${user.id}/transactions`,
+        method: 'POST',
+        data: { transaction }
+    })
+}

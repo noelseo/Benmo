@@ -4,8 +4,7 @@ import { fetchAll, clearTransactions } from '../../../actions/transaction_action
 
 
 const mSTP = ({ session, entities: { users, transactions } }) => {
-    return({
-            // 'root_reducer.js' keys
+    return({ // 'root_reducer.js' keys
     currentUser: users[session.id],
     transactions: Object.values(transactions).reverse()
 })
