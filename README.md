@@ -1,24 +1,9 @@
-# README
+# Benmo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Benmo is a clone of Venmo, which is a service of PayPal, Inc., a licensed provider of money transfer services.
 
-Things you may want to cover:
+[Live Demo](http://benmo.herokuapp.com/)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Technology
+* Frontend: React, Redux
+* Backend: Ruby on Rails, PostgreSQL, ActiveRecord
