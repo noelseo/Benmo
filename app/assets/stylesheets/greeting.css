@@ -53,6 +53,7 @@
 h1 {
     font-size: 50px;
     line-height: 50px;
+    font-weight: 100;
 }
 
 .greeting-middle {
@@ -63,8 +64,13 @@ h1 {
     padding-right: 10%;
 }
 
-.greeting-middle * {
+.greeting-middle-a {
     z-index: -1;
+}
+
+.greeting-middle-b {
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 .greeting-middle-message {
@@ -84,6 +90,7 @@ h1 {
 }
 
 .greeting-middle-signup2 {
+    z-index: 1000;
     text-decoration: none;
     color: #3d95ce;
 }

@@ -70,6 +70,7 @@ class Greeting extends React.Component {
         return (
             <nav className="greeting">
 
+
                 <div className="greeting-top">
                     <Link to="/">
                         <img className="benmologo" src={window.benmologo} />
