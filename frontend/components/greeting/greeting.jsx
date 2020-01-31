@@ -91,13 +91,13 @@ class Greeting extends React.Component {
 
                     <div className="greeting-middle-b">
                         <div className='greeting-middle-message'>
-                            <h3>
+                            <h1>
                                 Send money and
                                     <br />
                                 make purchases at
                                     <br />
                                 approved merchants
-                                </h3>
+                                </h1>
                         </div>
 
                         <div className="greeting-middle-signup1">or with your <Link className="greeting-middle-signup2" to="/signup">email address</Link>
