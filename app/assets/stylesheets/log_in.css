@@ -64,6 +64,11 @@
     min-width: 0;
     padding: 12px 8px 12px 4px;
     width: 100%;
+    
+}
+
+.login-input, text {
+    outline: none !important;
 }
 
 .auth-form label {
@@ -112,11 +117,42 @@
     color: #bcc2cc;
 }
 
-.error-alert {
-    padding: 20px;
-    background-color: #f44336;
+
+
+
+/* error rendering */
+
+.message {
+    z-index: -1;
+    background-color: rgba(255, 0, 0, 0.66);
+    opacity: 0.5;
     color: white;
-    margin-bottom: 15px;
-    opacity: 1;
-    transition: opacity 0.6s;
+    background-position: left top;
+    padding-top: 35px;
+    margin-bottom: 35px;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+
+.signin-header {
+    font-size: 35px;
+    text-align: center;
 }

@@ -146,11 +146,19 @@ class Greeting extends React.Component {
                                         <li>Privacy</li>
                                     </ul>
                                 </div>
+
                                 <div className="footer-section">
-                                    app store
-                                </div>
-                                <div className="footer-section">
-                                    google play
+                                    <div className="footer-section-inner">
+                                        <a href="https://itunes.apple.com/us/app/venmo/id351727428?mt=8">
+                                            <img class="download-links" src="https://cdn1.venmo.com/production/images/AppStore.png" />
+                                        </a>
+
+                                        <div className="footer-section-inner-middle"></div>
+
+                                        <a href="https://play.google.com/store/apps/details?id=com.venmo">
+                                            <img class="download-links" src="https://cdn1.venmo.com/production/images/PlayStore.png" />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         
@@ -160,7 +168,7 @@ class Greeting extends React.Component {
                 
                         <div className="footer-bottom">
                             <p>
-                                Venmo is a service of PayPal, Inc., a licensed provider of money transfer services (NMLS ID: 910457). All money transmission is provided by PayPal, Inc. pursuant to 
+                                Benmo is a not service of PayPal, Inc., a licensed provider of money transfer services (NMLS ID: 910457143423). All money transmission is not provided by PayPal, Inc. pursuant to PayPal, Inc.’s licenses. © 2019 Not PayPal, Inc.
                             </p>
                         </div>
                      

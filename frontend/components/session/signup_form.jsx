@@ -28,7 +28,7 @@ class SessionForm extends React.Component {
     //errors 
     renderErrors() {
         return (this.props.errors.map((error, i) => (
-            <div key={`signup-error-${i}`} className="signup-error">{error}</div>
+            <div class="message fadeOut" key={`signup-error-${i}`}>{error}</div>
         )))
     }
 
@@ -46,14 +46,14 @@ class SessionForm extends React.Component {
                 <div className="auth-signup">
 
                     <div className="auth-header-text">
-                        <h1>Create your account</h1>
+                        <p className="signup-header">Create your account</p>
                         <br/>
                         <br/>
                         
-                        <button className="facebook-button" onClick={this.facebookButton}>
+                        {/* <button className="facebook-button" onClick={this.facebookButton}>
                             <span className="facebook-logo"></span>
                             <span className="facebook-text">Sign Up with Facebook</span>
-                        </button>
+                        </button> */}
                     </div>
 
                     <form className="auth-form" onSubmit={this.handleSubmit}>
@@ -103,7 +103,7 @@ class SessionForm extends React.Component {
                         </div>
                         
                         <div className="footer">
-                            <p>
+                            <p className="signup-footer">
                                 <br/>
                                 <br/>
                                 By submitting, you confirm that you are authorized to use the number entered and agree to receive SMS texts to verify you own the number. Carrier fees may apply.

@@ -23,11 +23,11 @@
 .sign-in-button {
     color: #3d95ce;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 20px;
     position: absolute;
     right: 0;
     top: 0;
-    margin-right: 170px;
+    margin-right: 200px;
     margin-top: 40px;
 }
 
@@ -137,16 +137,6 @@ h4 {
     font-size: 16px;
 }
 
-/* .footer-inner > hr {
-    color: #666;
-    display: block;
-    width: 100vw; 
-    border-style: inset;
-    border-width: 1px;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-} */
-
 .header-line {
     border-top: 1px solid #e9e9e9;
     color: #666;
@@ -188,4 +178,19 @@ li {
 
 ul {
     list-style-type: none;
+}
+
+.download-links {
+    width: 120px;
+    height: 40px;
+}
+
+
+.footer-section-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section-inner-middle {
+    padding: 10px;
 }

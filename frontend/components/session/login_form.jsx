@@ -19,6 +19,7 @@ class LoginForm extends React.Component {
         e.preventDefault();
         this.props.processForm(this.state)
             .then(() => this.props.history.push('/'));
+        
     }
 
     //clear the errors
@@ -30,7 +31,7 @@ class LoginForm extends React.Component {
     renderErrors() {
         return (this.props.errors.map((error, i) => ( //error returns an array
             <div className="error-alert">
-                <div key={`error-${i}`} className="login-error">{error}</div>
+                <div class="message fadeOut" key={`error-${i}`}>{error}</div>
             </div>
         )))
     }
@@ -50,8 +51,11 @@ class LoginForm extends React.Component {
                     </div>
 
                     <div className="auth-login">
-                        <div className="auth-header-text">
-                            <h1>Sign in to Benmo</h1>
+                        <div className="signin-header">
+                            <p>Sign in to Benmo</p>
+                            <br/>
+                            <br/>
+                            
                         </div>
 
                         <form className="auth-form" onSubmit={this.handleSubmit}>

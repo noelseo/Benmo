@@ -10,7 +10,7 @@
     text-align: center;
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
-
+/* 
 .facebook-button {
     -webkit-box-shadow: 0 1px 2px rgba(38,38,38,.15);
     -webkit-box-sizing: border-box;
@@ -39,7 +39,8 @@
     border-radius: 4px 0 0 4px;
     margin-right: 16px;
     padding: 6px;
-}
+} */
+
 
 .auth-form {
     background: #f7f7f7;
@@ -105,6 +106,18 @@
     width: 100%;
 }
 
+.auth-form-input, text {
+    outline: none !important;
+}
+
+.auth-form-input, tel {
+    outline: none !important;
+}
+
+.auth-form-input, password {
+    outline: none !important;
+}
+
 .auth-form label {
     padding: 20px;
 }
@@ -153,4 +166,47 @@
 
 ::placeholder {
     color: #bcc2cc;
+}
+
+
+
+/* error rendering */
+
+.message {
+    z-index: -1;
+    background-color: rgba(255, 0, 0, 0.66);
+    opacity: 0.5;
+    color: white;
+    background-position: left top;
+    padding-top: 35px;
+    margin-bottom: 35px;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+
+
+.signup-header {
+    font-size: 35px;
+}
+
+.signup-footer {
+    font-size: 15px;
 }
