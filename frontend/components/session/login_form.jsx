@@ -29,7 +29,7 @@ class LoginForm extends React.Component {
     //errors (refer to controllers)
     renderErrors() {
         return (this.props.errors.map((error, i) => ( //error returns an array
-            <div className="error-div">
+            <div className="error-alert">
                 <div key={`error-${i}`} className="login-error">{error}</div>
             </div>
         )))
