@@ -7,3 +7,8 @@ Benmo is a clone of Venmo, which is a service of PayPal, Inc., a licensed provid
 ## Technology
 * Frontend: JavaScript, React, Redux
 * Backend: Ruby on Rails, PostgreSQL, ActiveRecord
+
+## Features
+* Transaction Initiation
+* Transaction History View
+* Friends Request
