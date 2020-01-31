@@ -1,3 +1,9 @@
 node_modules/
 bundle.js
 bundle.js.map
+
+#ignore temp and log folder to prevent excess storage usage
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep

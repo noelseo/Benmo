@@ -97,7 +97,7 @@ class SessionForm extends React.Component {
                         </div>
 
                         <div className="bottom">
-                            <a href="https://venmo.com/legal/us-helpful-information" className="helpful-info">Helpful Information</a>
+                            <p className="helpful-info">Helpful Information</p>
                             
                             <input className="sign-up-button" type="submit" value="Sign Up"/>
                         </div>

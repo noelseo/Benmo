@@ -149,13 +149,15 @@ class Greeting extends React.Component {
 
                                 <div className="footer-section">
                                     <div className="footer-section-inner">
-                                        <a href="https://itunes.apple.com/us/app/venmo/id351727428?mt=8">
+                                        <a>
+                                        {/* <a href="https://itunes.apple.com/us/app/venmo/id351727428?mt=8"> */}
                                             <img class="download-links" src="https://cdn1.venmo.com/production/images/AppStore.png" />
                                         </a>
 
                                         <div className="footer-section-inner-middle"></div>
 
-                                        <a href="https://play.google.com/store/apps/details?id=com.venmo">
+                                        <a>
+                                        {/* <a href="https://play.google.com/store/apps/details?id=com.venmo"> */}
                                             <img class="download-links" src="https://cdn1.venmo.com/production/images/PlayStore.png" />
                                         </a>
                                     </div>

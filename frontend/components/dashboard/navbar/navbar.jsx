@@ -13,9 +13,9 @@ const Navbar = ({ currentUser, logout }) => {
 
             <div className="navbar-box-right">
                 <button className="navbar-logout-button" onClick={logout}>Log Out</button>
-                <a href="https://help.venmo.com/hc/en-us">
+                <Link>
                     <p className="navbar-text">Help</p>
-                </a>
+                </Link>
 
                 <Link>
                     <p className="navbar-text">Settings</p>
