@@ -50,6 +50,10 @@
     color: #dce0e6;
 }
 
+h1 {
+    font-size: 50px;
+    line-height: 50px;
+}
 
 .greeting-middle {
     z-index: -1;
@@ -87,6 +91,19 @@
 .greeting-middle-signup2:hover {
     color: #bcc2cc;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
