@@ -68,23 +68,29 @@ import { Link } from "react-router-dom";
 class Greeting extends React.Component {
     render(){
         return (
-            <nav className="greeting-bar">
+            <nav className="greeting">
 
-                <Link to="/">
-                    <img className="benmologo" src={window.benmologo} />
-                </Link>
+                <div className="greeting-top">
+                    <Link to="/">
+                        <img className="benmologo" src={window.benmologo} />
+                    </Link>
 
-                <Link className="sign-in-button" to="/sign-in">Sign In</Link>
+                    <Link className="sign-in-button" to="/sign-in">Sign In</Link>
+                <div className="header-line"></div>
+                </div>
 
-                <div className="main">
-                    <div className="main-a">
+
+
+
+                <div className="greeting-middle">
+                    <div className="greeting-middle-a">
                         <video className="phones" autoPlay loop muted preload="auto">
                             <source src={window.phonesURL} type="video/mp4" />
                         </video>
                     </div>
 
-                    <div className="main-b">
-                        <div className='main-message'>
+                    <div className="greeting-middle-b">
+                        <div className='greeting-middle-message'>
                             <h3>
                                 Send money and
                                     <br />
@@ -94,10 +100,75 @@ class Greeting extends React.Component {
                                 </h3>
                         </div>
 
-                        <div className="main-signup1">or with your <Link className="main-signup2" to="/signup">email address</Link>
+                        <div className="greeting-middle-signup1">or with your <Link className="greeting-middle-signup2" to="/signup">email address</Link>
                         </div>
                     </div>
                 </div>
+
+                <footer>
+
+                    <div className="footer-inner">
+
+                            <div className="footer-line"></div>
+
+                            <div className="footer-top">
+                                <div className="footer-section">
+                                    <h4>Learn More</h4>
+                                    <ul>
+                                        <li>How it works</li>
+                                        <li>Our Fees</li>
+                                        <li>Business</li>
+                                        <li>Card</li>
+                                        <li>Security</li>
+                                        <li>Contact Us</li>
+                                    </ul>
+                                </div>
+                                <div className="footer-section">
+                                    <h4>Company</h4>
+                                    <ul>
+                                        <li>Our Team</li>
+                                        <li>Jobs</li>
+                                    </ul>
+                                </div>
+                                <div className="footer-section">
+                                    <h4>Community</h4>
+                                    <ul>
+                                        <li>Blog</li>
+                                        <li>Help Center</li>
+                                        <li>Developer</li>
+                                    </ul>
+                                </div>
+                                <div className="footer-section">
+                                    <h4>Terms</h4>
+                                    <ul>
+                                        <li>Legal</li>
+                                        <li>Privacy</li>
+                                    </ul>
+                                </div>
+                                <div className="footer-section">
+                                    app store
+                                </div>
+                                <div className="footer-section">
+                                    google play
+                                </div>
+                            </div>
+                        
+
+                        <div className="footer-middle"></div>
+                        
+                
+                        <div className="footer-bottom">
+                            <p>
+                                Venmo is a service of PayPal, Inc., a licensed provider of money transfer services (NMLS ID: 910457). All money transmission is provided by PayPal, Inc. pursuant to 
+                            </p>
+                        </div>
+                     
+
+
+                    </div>
+               
+
+                </footer>
                 
             </nav>
         )
