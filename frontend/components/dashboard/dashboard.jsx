@@ -24,9 +24,9 @@ class Dashboard extends React.Component {
         if (field === "amount" && parseFloat(e.target.value) < 0) {
             this.setState({ [field]: 0 });
         } else {
-            this.setState({ [field]: e.target.value });
+            this.setState({ [field]: parseFloat(e.target.value).toFixed(2) });
         }
-        // if (e.target.value) 
+        
         // console.log( typeof e.target.value );  => string
     }
 
@@ -38,6 +38,17 @@ class Dashboard extends React.Component {
         } else {
             this.props.createATransaction(this.state, this.props.currentUser);
         }
+    }
+
+    oneDot(input) {
+        var value = input.value,
+            value = value.split('.').join('');
+
+        if (value.length > 3) {
+            value = value.substring(0, value.length - 3) + '.' + value.substring(value.length - 3, value.length);
+        }
+
+        input.value = value;
     }
 
     render() {
@@ -82,16 +93,24 @@ class Dashboard extends React.Component {
 
                             {/* Pay */}
                             <div className="dashboard-pay-box">
-                                <div className="dashboard-pay-box-inner">Initiate Transactions</div>
-                                <div className="dashboard-pay-div">
-                                    <PayeesContainer handleChange={this.handleChange}/>
-                                </div>
-                                
-                                Amount: $ <input type="number" value={this.state.amount} onChange={(e) => this.handleChange(e, "amount" )}/>
 
-                                {/* if you're not in a form, don't use input:submit */}
-                                
-                                <button onClick={this.handleSubmit}>Pay</button>
+                                <div className="dashboard-pay-box-inner">Initiate Transactions</div>
+
+                                <div className="dashboard-pay-box-inner-low">
+                                    <div className="dashboard-pay-dropdown">
+                                        <PayeesContainer handleChange={this.handleChange}/>
+                                    </div>
+                                    
+                                    <div className="amount-box">
+                                        <span class="currency">$</span>
+                                        <input className="dashboard-pay-amount" type="number" placeholder="How much?" onkeyup={this.oneDot} onChange={(e) => this.handleChange(e, "amount")}/>
+                                    </div>
+
+                                    {/* if you're not in a form, don't use input:submit */}
+                                    
+                                    <button className="dashboard-pay-button" onClick={this.handleSubmit}>Pay</button>
+                                </div>
+                                    
 
                             </div>
 

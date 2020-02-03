@@ -4,3 +4,6 @@
 #     data = Rack::Utils.parse_nested_query(raw_post)
 #     data.deep_transform_keys!(&:underscore)
 # }
+
+
+# to change snake_case to camelCase

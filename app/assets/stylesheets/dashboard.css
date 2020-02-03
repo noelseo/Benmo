@@ -89,16 +89,17 @@
     /* height: 2265px; */
 }
 
+/* Initiate Transactions */
 .dashboard-pay-box {
     border: 1px solid #bbb;
     width: 632px;
     margin-bottom: 20px;
     background: #fff;
     margin-left: 0px;
-    height: 112px;
+    height: 150px;
     padding: 10px 20px;
 }
-
+    /* Text and line */
     .dashboard-pay-box-inner {
         border-bottom: 1px solid #e9e9e9;
         font-size: 15px;
@@ -107,21 +108,86 @@
         font-weight: bold;
     }
 
-    .dashboard-pay-div {
+    /* Lower part */
+    .dashboard-pay-box-inner-low {
         display: flex;
-        justify-content: center;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        justify-content: space-between;
     }
+        /* Select a friend */
+        .dashboard-pay-dropdown {
+            padding-top: 30px;
+            padding-left: 10px;
+            color: #3C95D2;
+            outline: none;
+            cursor: pointer;
+        }
 
-    /* .dashboard-pay-text {       Pay under Initiate Transactions box
-        color: #3d95ce;
-        font-weight: 700;
-        font-size: 25px;
-        text-decoration: none;
-        cursor: pointer;
-        text-align: center;
-    } */
+        select {
+            outline: none;
+            background: transparent;
+            width: 170px;
+            font-size: 20px;
+            color: #3C95D2;
+            line-height: 1;
+            border: 0;
+            border-radius: 0;
+            height: 22px;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+
+
+
+        /* $ How much? */
+        .amount-box {
+            display: flex;
+            justify-content: flex-start;
+            padding-top: 15px;
+            padding-right: 20px;
+        }
+
+        .amount-box .currency {
+            font-size: 20px;
+            padding: 0 10px 0 20px;
+            color: #999;
+            line-height: 2.5;
+            background: white;
+        }
+
+        .dashboard-pay-amount {
+            border: transparent;
+            outline: none;
+            font-size: 30px;
+            width: 200px;
+        }
+
+            /* to remove arrows next to the dropdown */
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            } /* Chrome, Safari, Edge, Opera */
+
+            
+            input[type=number] {
+                -moz-appearance: textfield;
+            } /* Firefox */
+
+
+
+        /* Pay button */
+        .dashboard-pay-button {
+            padding-top: 20px;
+            padding-right: 40px;
+            color: #3C95D2;
+            font-size: 40px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .dashboard-pay-button:hover {
+            opacity: 0.8;
+        }
 
 .dashboard-friend-request-box {
     width: 632px;

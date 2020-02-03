@@ -8,7 +8,7 @@ class Profile extends React.Component {
             <div className="profile-box">
 
                 <h3 className="profile-fullname">{currentUser.first_name} {currentUser.last_name}</h3>
-                <h6 className="balance">${currentUser.balance}</h6>
+                <h6 className="balance">${currentUser.balance.toFixed(2)}</h6>
                 <a href="#" className="funding">Add More Funds »</a>
 
             </div>

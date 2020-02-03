@@ -21,7 +21,7 @@ class Payees extends React.Component {
 
                 <div>
                     <select onChange={(e) => this.props.handleChange(e, "receiver_id")}>
-                        <option disabled selected>Select</option>
+                        <option disabled selected>Select a friend</option>
                         {friends.map((friend, i) => { //React parses each item in an array as an element in the map function. forEach doesn't work 
                             return <option key={i} value={friend.id}>{friend.first_name} {friend.last_name}</option>
                         }
