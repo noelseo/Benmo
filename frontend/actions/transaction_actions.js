@@ -28,6 +28,7 @@ export const clearTransactions = () => ({
     type: CLEAR_TRANSACTIONS
 })
 
+
 export const createATransaction = (transaction) => (
     TransactionApiUtil.createATransaction(transaction)
         .then(

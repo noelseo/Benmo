@@ -102,6 +102,19 @@ class Greeting extends React.Component {
                         </div>
 
                         <div className="greeting-middle-signup1">or with your <Link className="greeting-middle-signup2" to="/signup">email address</Link>
+
+                        <div id="noel">
+                            <div id="github">
+                                <a href="https://github.com/noelseo">
+                                    <img src={window.github} width="75px" height="73px" id="github" />
+                                </a>
+                            </div>
+                            <div id="linkedin">
+                                <a href="https://www.linkedin.com/in/noelseo/">
+                                    <img src={window.linkedin} width="50px" height="50px" id="linkedin" />
+                                </a>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>

@@ -194,3 +194,28 @@ ul {
 .footer-section-inner-middle {
     padding: 10px;
 }
+
+
+
+
+#noel {
+    display: flex;
+    padding-top: 80px;
+    padding-left: 150px;
+}
+
+    #github {
+ 
+    }
+
+    #github:hover {
+        opacity: 0.8;
+    }
+
+    #linkedin {
+        padding-top: 6px;
+    }
+
+    #linkedin:hover {
+        opacity: 0.8;
+    }
