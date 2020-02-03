@@ -29,8 +29,8 @@ export const clearTransactions = () => ({
 })
 
 
-export const createATransaction = (transaction) => (
-    TransactionApiUtil.createATransaction(transaction)
+export const createATransaction = (transaction, user) => (
+    TransactionApiUtil.createATransaction(transaction, user)
         .then(
             (transaction) => dispatch({ type: CREATE_A_TRANSACTION, transaction }),
             (errors) => { return dispatch(receiveErrors(errors.responseJSON)) }

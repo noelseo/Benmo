@@ -19,7 +19,7 @@ const TransactionsReducer = (oldState = {}, action) => {
             return {};
 
         // case CREATE_A_TRANSACTION:
-            
+        //     Object.keys(action.transactions)
 
         default:
             return oldState;

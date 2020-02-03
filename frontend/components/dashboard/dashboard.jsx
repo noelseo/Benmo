@@ -4,10 +4,41 @@ import NavbarContainer from './navbar/navbar_container';
 import TransactionHistoryContainer from './transaction_history/transaction_history_container';
 import FriendsContainer from './friends/friends_container';
 import { Link } from "react-router-dom";
+import PayeesContainer from './payees/payees_container';
+
+
+
+
+
 
 class Dashboard extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = { amount: 0, receiver_id: null };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
 
+    handleChange(e, field) {
+        if (field === "amount" && parseFloat(e.target.value) < 0) {
+            this.setState({ [field]: 0 });
+        } else {
+            this.setState({ [field]: e.target.value });
+        }
+        // if (e.target.value) 
+        // console.log( typeof e.target.value );  => string
+    }
+
+    handleSubmit(e) {
+        if (parseFloat(this.state.amount) === 0) {
+            alert("You must give a valid amount");
+        } else if (this.state.receiver_id === null) {
+            alert("You must select a payee");
+        } else {
+            this.props.createATransaction(this.state, this.props.currentUser);
+        }
+    }
 
     render() {
         return (
@@ -48,24 +79,41 @@ class Dashboard extends React.Component {
                     <div className="dashboard-bottom-middle">
 
                         <div className="dashboard-bottom-left">
+
+                            {/* Pay */}
                             <div className="dashboard-pay-box">
                                 <div className="dashboard-pay-box-inner">Initiate Transactions</div>
                                 <div className="dashboard-pay-div">
-
-                         
-                                    
-                                    <input type="submit" value=""/>
-                                    <Link className="dashboard-pay-text">Pay</Link>
+                                    <PayeesContainer handleChange={this.handleChange}/>
                                 </div>
+                                
+                                Amount: $ <input type="number" value={this.state.amount} onChange={(e) => this.handleChange(e, "amount" )}/>
+
+                                {/* if you're not in a form, don't use input:submit */}
+                                
+                                <button onClick={this.handleSubmit}>Pay</button>
+
                             </div>
+
+
+
+                            {/* Friend Request */}
                             <div className="dashboard-friend-request-box">
                                 <div className="dashboard-friend-request-box-inner">Friend Requests</div>
                             </div>
+
+
+
+                            {/* Transaction History */}
                             <div className="dashboard-transaction-history-box">
                                 <div className="dashboard-transaction-history-box-inner">Transactions History</div> 
                                 <TransactionHistoryContainer />
                             </div>
                         </div>
+
+
+
+
 
                         <div className="dashboard-bottom-right">
                             <div className="dashboard-profile-box"><ProfileContainer /></div>

@@ -16,6 +16,9 @@ const mDTP = dispatch => ({
     clearFriends: () => dispatch(clearFriends())
 })
 
+
+
+
 export default connect(mSTP, mDTP)(Friends);
 
 

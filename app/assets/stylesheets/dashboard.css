@@ -114,14 +114,14 @@
         padding-bottom: 20px;
     }
 
-    .dashboard-pay-text {
+    /* .dashboard-pay-text {       Pay under Initiate Transactions box
         color: #3d95ce;
         font-weight: 700;
         font-size: 25px;
         text-decoration: none;
         cursor: pointer;
         text-align: center;
-    }
+    } */
 
 .dashboard-friend-request-box {
     width: 632px;

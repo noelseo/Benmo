@@ -1,6 +1,6 @@
 import React from 'react';
 import GreetingContainer from '../greeting/greeting_container';
-import Dashboard from '../dashboard/dashboard';
+import Dashboard from '../dashboard/dashboard_container';
 
 const Home = ({ currentUser }) => {
 

@@ -2,6 +2,7 @@ class Api::TransactionsController < ApplicationController
 
     def create
         @transaction = Transaction.new(transaction_params)
+        @transaction.sender_id = params[:user_id]
         # @sender = current_user
         # @receiver = User.find(params[:receiver_id])
 
@@ -46,7 +47,7 @@ class Api::TransactionsController < ApplicationController
 
     private
     def transaction_params
-        params.require(:transaction).permit(:amount, :sender_id, :receiver_id)
+        params.require(:transaction).permit(:amount, :receiver_id)
     end
 
 end
