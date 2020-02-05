@@ -21,3 +21,6 @@ export default Root;
 //<HashRouter> uses the hash in the URL to render the component.
 // It uses URL hash, it puts no limitations on supported browsers or web server. 
 // Server-side routing is independent from client-side routing.
+
+
+// App.jsx

@@ -1,3 +1,5 @@
+// root.jsx
+
 import React from 'react';
 import HomeContainer from './home/home_container';
 import LoginFormContainer from './session/login_form_container';
@@ -15,7 +17,7 @@ import {
 const App = () => (
     <div className="app-jsx">
         <Switch>
-            <Route exact path="/" component={HomeContainer} />
+            <Route exact path="/" component={HomeContainer} /> 
             <AuthRoute path="/sign-in" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
             
@@ -25,3 +27,7 @@ const App = () => (
 );
 
 export default App;
+
+// Route: 
+// AuthRoute: only accessible when NOT logged in
+// ProtectedRoute: only accessible ONLY when logged in
