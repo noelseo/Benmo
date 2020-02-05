@@ -8,14 +8,11 @@ import PayeesContainer from './payees/payees_container';
 
 
 
-
-
-
 class Dashboard extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { amount: 0, receiver_id: null };
+        this.state = { amount: 0, receiver_id: null }; //
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -27,7 +24,7 @@ class Dashboard extends React.Component {
             this.setState({ [field]: parseFloat(e.target.value).toFixed(2) });
         }
         
-        // console.log( typeof e.target.value );  => string
+        // console.log( typeof e.target.value );  => shows as string
     }
 
     handleSubmit(e) {
@@ -38,17 +35,6 @@ class Dashboard extends React.Component {
         } else {
             this.props.createATransaction(this.state, this.props.currentUser);
         }
-    }
-
-    oneDot(input) {
-        var value = input.value,
-            value = value.split('.').join('');
-
-        if (value.length > 3) {
-            value = value.substring(0, value.length - 3) + '.' + value.substring(value.length - 3, value.length);
-        }
-
-        input.value = value;
     }
 
     render() {
@@ -97,17 +83,19 @@ class Dashboard extends React.Component {
                                 <div className="dashboard-pay-box-inner">Initiate Transactions</div>
 
                                 <div className="dashboard-pay-box-inner-low">
+                                    {/* #1 */}
                                     <div className="dashboard-pay-dropdown">
                                         <PayeesContainer handleChange={this.handleChange}/>
                                     </div>
                                     
+                                    {/* #2 */}
                                     <div className="amount-box">
-                                        <span class="currency">$</span>
-                                        <input className="dashboard-pay-amount" type="number" placeholder="How much?" onkeyup={this.oneDot} onChange={(e) => this.handleChange(e, "amount")}/>
+                                        <span className="currency">$</span>
+                                        <input className="dashboard-pay-amount" type="number" placeholder="How much?" onChange={(e) => this.handleChange(e, "amount")} /> {/* if you're not in a form, don't use input:submit */}
                                     </div>
 
-                                    {/* if you're not in a form, don't use input:submit */}
-                                    
+                                    {/* #3 */}
+                                    {/* very front */}
                                     <button className="dashboard-pay-button" onClick={this.handleSubmit}>Pay</button>
                                 </div>
                                     

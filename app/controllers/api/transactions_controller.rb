@@ -7,7 +7,7 @@ class Api::TransactionsController < ApplicationController
         # @receiver = User.find(params[:receiver_id])
 
         if @transaction.save && (@transaction.sender.balance - @transaction.amount) >= 0
-            sender = @transaction.sender
+            sender = @transaction.sender #  in 'transaction.rb', 'belongs_to :sender' gives a function to use
             receiver = @transaction.receiver
             sender.balance -= @transaction.amount
             receiver.balance += @transaction.amount

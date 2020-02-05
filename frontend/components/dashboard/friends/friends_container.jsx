@@ -12,7 +12,7 @@ const mSTP = ({ session, entities: { users, friends } }) => {
 
 
 const mDTP = dispatch => ({
-    fetchAllFriends: (user) => dispatch(fetchAllFriends(user)),
+    fetchAllFriends: (user) => dispatch(fetchAllFriends(user)), //
     clearFriends: () => dispatch(clearFriends())
 })
 

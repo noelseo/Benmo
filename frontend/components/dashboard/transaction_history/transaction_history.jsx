@@ -26,7 +26,7 @@ class TransactionHistory extends React.Component {
 
     render() {
         const { currentUser, transactions } = this.props;
-
+        
         return (
             <div className="transaction-history-box">
                     {
