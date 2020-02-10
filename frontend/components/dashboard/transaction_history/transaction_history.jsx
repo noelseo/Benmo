@@ -11,7 +11,7 @@ class TransactionHistory extends React.Component {
     componentDidMount() {
         this.props.clearTransactions()
         this.props.fetchAll(this.props.currentUser)
-         //calls the 'fetchAll' function from the container that calls from transaction_actions.js
+        //calls the 'fetchAll' function from the container that calls from transaction_actions.js
     } 
 
     getDate(string) {
