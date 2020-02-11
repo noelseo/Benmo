@@ -4,9 +4,11 @@
 
 Benmo is a clone of Venmo, which is a service of PayPal, Inc., a licensed provider of money transfer services. This web application allows users to create an account to use transaction services with their friends.
 
-[Live Demo](http://benmo.herokuapp.com/)
+&nbsp;
 
 ![Benmo Main](./README/benmo.gif)
+
+&nbsp;
 
 ## Technology
 * Frontend: `JavaScript`, `React.js`, `Redux.js`
