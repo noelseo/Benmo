@@ -1,4 +1,4 @@
-[<img src="./app/assets/images/benmologo.png" width="300" align=center>](http://benmo.herokuapp.com/)
+[<img src="./app/assets/images/benmologo.png" width="200" align=center>](http://benmo.herokuapp.com/)
 
 # 
 
