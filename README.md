@@ -1,4 +1,6 @@
-# Benmo
+[<img src="./app/assets/images/benmologo.png" width="300" align=center>](http://benmo.herokuapp.com/)
+
+# 
 
 Benmo is a clone of Venmo, which is a service of PayPal, Inc., a licensed provider of money transfer services. This web application allows users to create an account to use transaction services with their friends.
 
