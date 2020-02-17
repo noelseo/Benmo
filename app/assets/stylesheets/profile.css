@@ -50,6 +50,6 @@
     padding-bottom: 15px;
     text-decoration: none;
     font-weight: bold;
-    cursor: pointer;
+    /* cursor: pointer; */
     text-align: left;
 }
