@@ -5,15 +5,15 @@ export const CLEAR_TRANSACTIONS = 'CLEAR_TRANSACTIONS';
 
 
 //ACTION: #1 way of writing a method
-const receiveAllTransactions = ({ transactions }) => ({ //take the ajax object as an arg
-    type: RECEIVE_ALL_TRANSACTIONS, //reducer listens 
-    transactions: transactions
+const receiveAllTransactions = ( payload ) => ({ //take the ajax object as an arg
+    type: RECEIVE_ALL_TRANSACTIONS, 
+    payload //reducer listens 
 })
 
 export const fetchAll = (user) => dispatch => (  //this gets used in transaction_history.jsx
     TransactionApiUtil.receiveAllTransactions(user)
         .then(
-            (transactions) => dispatch(receiveAllTransactions(transactions)), 
+            (payload) => dispatch(receiveAllTransactions(payload)), 
             //same as dispatch({ type: RECEIVE_ALL_TRANSACTIONS, transactions }) 
             //'transactions' is the ajax object received from 'transaction_api_util.js'
         
@@ -42,7 +42,7 @@ export const clearTransactions = () => ({
 export const createATransaction = (transaction, user) => dispatch => ( //action creator
     TransactionApiUtil.createATransaction(transaction, user) // 1. if this is successful,
         .then( // 2. it dispatches the below action
-            (transactions) => dispatch(receiveAllTransactions(transactions)) //once the transaction is created in the db, we want to get the list of ALL transactions
+            (payload) => dispatch(receiveAllTransactions(payload)) //once the transaction is created in the db, we want to get the list of ALL transactions
             //above 'transactions' is the return value after the ajax call is completed
 
             // (errors) => { return dispatch(receiveErrors(errors.responseJSON)) }

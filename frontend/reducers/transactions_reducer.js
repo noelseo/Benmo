@@ -8,10 +8,10 @@ const TransactionsReducer = (oldState = {}, action) => {
         case RECEIVE_ALL_TRANSACTIONS: //reducer heard it from 'transaction_actions.js'
 
 
-            Object.keys(action.transactions).forEach(id => ( 
+            Object.keys(action.payload.transactions).forEach(id => ( 
                       //action -> line 6 in 'transaction_actions.js'
                       //action is -> { type: RECEIVE_ALL_TRANSACTIONS, transactions: transactions_object }
-                newState[id] = action.transactions[id]
+                newState[id] = action.payload.transactions[id]
             ))
 
             return newState; 

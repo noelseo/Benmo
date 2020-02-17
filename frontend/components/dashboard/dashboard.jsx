@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import PayeesContainer from './payees/payees_container';
 
 
-
 class Dashboard extends React.Component {
 
     constructor(props) {

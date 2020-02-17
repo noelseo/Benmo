@@ -14,5 +14,5 @@ export const createATransaction = (transaction, user) => {
     })
 } 
 // 1. this ajax call sends the data to the controller
-// 2. then backend returns a response (usually object)
+// 2. then backend (index.json.jbuilder) returns a response (payload)
 
