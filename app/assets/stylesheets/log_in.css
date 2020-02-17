@@ -91,6 +91,7 @@
     display: inline-block;
     font-size: 16px;
     border-radius: 6px;
+    outline: none;
 }
 
 .submit-button:hover {
@@ -107,6 +108,7 @@
     display: inline-block;
     font-size: 16px;
     border-radius: 6px;
+    outline: none;
 }   
 
 .demo-button:hover {
