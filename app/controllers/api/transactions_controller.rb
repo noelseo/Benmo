@@ -1,5 +1,7 @@
 class Api::TransactionsController < ApplicationController
 
+    # using ActiveRecord, we can access the database
+
     def create
         @transaction = Transaction.new(transaction_params)
         @transaction.sender_id = params[:user_id]
@@ -26,13 +28,12 @@ class Api::TransactionsController < ApplicationController
     end
 
     def index # index calls the 'index.json.jbuilder'    
-        
+
         # Below retrieves the current user's transactions
         # @transactions = Transaction.where('sender_id = :id or receiver_id = :id', { id: current_user.id }).order(created_at: :desc)
 
         # BETTER WAY
         # Below retrieves the transactions for the selected user
-        
         @transactions = Transaction.where('sender_id = :id or receiver_id = :id', { id: params[:user_id] }).order(created_at: :desc)
         @user = User.find(params[:user_id])
         

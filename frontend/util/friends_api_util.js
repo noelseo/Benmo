@@ -4,3 +4,11 @@ export const receiveAllFriends = (user) => {
         method: 'GET'
     })
 }
+
+// ///////
+// export const receiveAFriend = (userId) => {
+//     return $.ajax({
+//         url: `/api/users/${userId}`,
+//         method: 'GET'
+//     })
+// }

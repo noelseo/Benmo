@@ -17,7 +17,7 @@ import {
 const App = () => (
     <div className="app-jsx">
         <Switch>
-            <Route exact path="/" component={HomeContainer} /> 
+            <Route exact path="/" component={HomeContainer} />
             <AuthRoute path="/sign-in" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
             
