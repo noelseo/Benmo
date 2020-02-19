@@ -46,11 +46,11 @@
     padding-top: 10px;
     font-size: 30px;
     font-weight: bold;
-
+    color: white;
 }
 
 .modal-button-text {
-    color: black;
+    color: white;
     cursor: pointer;
     font-weight: bold;
 

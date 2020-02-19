@@ -71,7 +71,7 @@ class Modal extends React.Component {
                         </div>
 
                         <button className="modal-pay-button" onClick={this.handleSubmit}>
-                            Pay
+                            <div className="modal-button-text">Pay</div>
                         </button>
 
                     </section>
