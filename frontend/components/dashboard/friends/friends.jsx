@@ -11,11 +11,11 @@ class Friends extends React.Component {
     componentDidMount() {
         this.props.clearFriends();
         this.props.fetchAllFriends(this.props.currentUser);
-        this.selectFriend = this.selectFriend.bind(this);
+        this.showModal = this.showModal.bind(this);
         this.hideModal = this.hideModal.bind(this);
     }
 
-    selectFriend(friend) {
+    showModal(friend) {
         this.setState({ show: true, selectedFriend: friend });
     };
 
@@ -32,7 +32,7 @@ class Friends extends React.Component {
                 {this.props.friends.map((friend, i) => (
                     <div className="friends-each">
                         {/* <Link key={i} className="friends-fullname">{friend.first_name} {friend.last_name}</Link> */}
-                        <button key={i} className="friends-fullname" onClick={ () => this.selectFriend(friend) }>{friend.first_name} {friend.last_name}</button>
+                        <button key={i} className="friends-fullname" onClick={ () => this.showModal(friend) }>{friend.first_name} {friend.last_name}</button>
                     </div>
                 ))}
 
