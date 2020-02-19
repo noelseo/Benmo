@@ -6,12 +6,19 @@ const Modal = ({ handleClose, show, friend }) => {
     if (!friend) return null; 
     
     return (
-        <div className={showHideClassName}>
-            <section className="modal-main">
-                {friend.first_name}
-                <button onClick={handleClose}>close</button>
-            </section>
-        </div>
+      <div className={showHideClassName}>
+        <section className="modal-main">
+
+          <span className="modal-recipient">Recipient
+            <br/>
+            {friend.first_name}</span>
+
+          <button className="modal-button" onClick={handleClose}>
+            <p className="modal-button-text"> x </p>
+          </button>
+
+        </section>
+      </div>
     );
 };
 
