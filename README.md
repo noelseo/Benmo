@@ -83,11 +83,9 @@ Benmo is a clone of Venmo, which is a service of PayPal, Inc., a licensed provid
     }
 ```
 
-### Friends Request
-
-
 
 ## Future Plans
+* Friends Requests
 * Allow users to add comments along with initiating transactions
-* Create Responsive UI for different mobile devices
+
 

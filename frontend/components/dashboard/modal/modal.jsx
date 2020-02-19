@@ -1,4 +1,5 @@
 import React from 'react';
+// import ProfileContainer from '../profile/profile_container';
 
 const Modal = ({ handleClose, show, friend }) => {
     const showHideClassName = show ? "modal display-block" : "modal display-none";
@@ -6,18 +7,17 @@ const Modal = ({ handleClose, show, friend }) => {
     if (!friend) return null; 
     
     return (
-      <div className={showHideClassName}>
-        <section className="modal-main">
+        <div className={showHideClassName}>
+            <section className="modal-main">
+                <span className="modal-recipient">Recipient
+                <br/>
+                {friend.first_name}</span>
 
-          <span className="modal-recipient">Recipient
-            <br/>
-            {friend.first_name}</span>
+                <button className="modal-button" onClick={handleClose}>
+                    <p className="modal-button-text"> x </p>
+                </button>
 
-          <button className="modal-button" onClick={handleClose}>
-            <p className="modal-button-text"> x </p>
-          </button>
-
-        </section>
+            </section>
       </div>
     );
 };
