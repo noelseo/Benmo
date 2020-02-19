@@ -27,7 +27,7 @@ class Friends extends React.Component {
         return(
             <div>
                 
-                <Modal show={this.state.show} handleClose={this.hideModal} friend={this.state.selectedFriend} />
+                <Modal show={this.state.show} handleClose={this.hideModal} friend={this.state.selectedFriend} createATransaction={this.props.createATransaction} currentUser={this.props.currentUser}/>
 
                 {this.props.friends.map((friend, i) => (
                     <div className="friends-each">

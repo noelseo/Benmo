@@ -1,19 +1,22 @@
 import { connect } from 'react-redux';
 import Friends from './friends';
 import { fetchAllFriends, clearFriends } from '../../../actions/friend_actions';
+import { createATransaction } from '../../../actions/transaction_actions';
 
 
-const mSTP = ({ session, entities: { users, friends } }) => {
+const mSTP = ({ session, entities: { users, friends, transactions } }) => {
     return ({ // 'root_reducer.js' keys
         currentUser: users[session.id],
-        friends: Object.values(friends)
+        friends: Object.values(friends),
+        transactions: Object.values(transactions).reverse()
     })
 }
 
 
 const mDTP = dispatch => ({
     fetchAllFriends: (user) => dispatch(fetchAllFriends(user)), //
-    clearFriends: () => dispatch(clearFriends())
+    clearFriends: () => dispatch(clearFriends()),
+    createATransaction: (transaction, user) => dispatch(createATransaction(transaction, user))
 })
 
 
