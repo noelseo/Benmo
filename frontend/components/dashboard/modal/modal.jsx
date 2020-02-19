@@ -30,7 +30,7 @@ class Modal extends React.Component {
         if (parseFloat(this.state.amount) === 0) {
             alert("You must give a valid amount");
         } else {
-            this.setState({ selectedFriend: this.props.friend, receiver_id: this.props.friend.id }, 
+            this.setState({ show: false, selectedFriend: this.props.friend, receiver_id: this.props.friend.id }, 
                 () => {
                     this.props.createATransaction(
                     this.state,
@@ -50,30 +50,30 @@ class Modal extends React.Component {
             return (
                 <div className={showHideClassName}>
                     <section className="modal-main">
-                    <span className="modal-recipient">{friend.first_name}</span>
 
-                    {/* #2 */}
-                    <div className="amount-box">
-                        <span className="currency">$</span>
-                        <input
-                        className="dashboard-pay-amount"
-                        type="number"
-                        placeholder="How much?"
-                        onChange={e => this.handleChange(e, "amount")}
-                        />{" "}
-                        {/* if you're not in a form, don't use input:submit */}
-                    </div>
+                        <div className="modal-top">
+                            <span className="modal-recipient"> {friend.first_name}</span>
+                            
+                            <button className="modal-button" onClick={handleClose}>
+                                <div className="modal-button-text"> x </div>
+                            </button>
+                        </div>
 
-                    {/* #3 */}
-                    {/* very front */}
-                    <button className="dashboard-pay-button" onClick={this.handleSubmit}>
-                        Pay
-                    </button>
+                        <div className="modal-amount-box">
+                            <span className="modal-currency">$</span>
+                            <input
+                            className="modal-pay-amount"
+                            type="number"
+                            placeholder="How much?"
+                            onChange={e => this.handleChange(e, "amount")}
+                            />
+                            {/* if you're not in a form, don't use input:submit */}
+                        </div>
 
+                        <button className="modal-pay-button" onClick={this.handleSubmit}>
+                            Pay
+                        </button>
 
-                    <button className="modal-button" onClick={handleClose}>
-                        <p className="modal-button-text"> x </p>
-                    </button>
                     </section>
                 </div>
             );

@@ -30,22 +30,95 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+
 }
+
+.modal-top {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
 
 .modal-recipient {
-    padding-left: 30px;
-    padding-top: 30px;
-    padding-bottom: 40px;
+    padding-top: 10px;
     font-size: 30px;
-}
+    font-weight: bold;
 
-.modal-button {
-    background: transparent;
-    font-size: 50px;
 }
 
 .modal-button-text {
     color: black;
+    cursor: pointer;
+    font-weight: bold;
+
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform 1s ease-in-out;
+
+    outline: none;
+}
+
+.modal-button-text:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    outline: none;
+}
+
+
+
+
+
+
+.modal-amount-box {
+    display: flex;
+    justify-content: flex-start;
+    /* padding-right: 20px; */
+}
+
+.modal-amount-box .currency {
+    font-size: 20px;
+    padding: 0 10px 0 20px;
+    color: #999;
+    line-height: 2.5;
+    background: #3C95D2;
+    opacity: 0.6;
+}
+
+.modal-currency {
+    font-size: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.modal-pay-amount {
+    border: transparent;
+    outline: none;
+    font-size: 30px;
+    width: 200px;
+    background: #3C95D2;
+    opacity: 0.6;
+}
+
+.modal-pay-button {
+    padding-bottom: 40px;
+    color: white;
+    background: #3C95D2;
+    opacity: 0.6;
+    font-size: 40px;
     outline: none;
     cursor: pointer;
 }
+
+.modal-pay-button:hover {
+    opacity: 0.8;
+    color: rgb(109, 25, 25);
+}
+
+.modal-button {
+    background: transparent;
+    font-size: 40px;
+}
+
+
