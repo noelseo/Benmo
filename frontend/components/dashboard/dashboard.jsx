@@ -5,15 +5,32 @@ import TransactionHistoryContainer from './transaction_history/transaction_histo
 import FriendsContainer from './friends/friends_container';
 import { Link } from "react-router-dom";
 import PayeesContainer from './payees/payees_container';
+import ChartistGraph from "react-chartist";
+import { fetchGraphData } from '../../util/transaction_api_util';
 
 
 class Dashboard extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { amount: 0, receiver_id: null }; //
+        this.state = { 
+            amount: 0, 
+            receiver_id: null,
+            data: []
+        };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    // graph
+    componentDidMount() {
+        fetchGraphData(this.props.currentUser.id).then(res => {
+            console.log(res);
+            
+            this.setState({
+                data: [{"name": "Sent Payments", "data": res.sent_transactions}, {"name": "Received Payments", "data": res.received_transactions}]
+            })
+        });
     }
 
     handleChange(e, field) {
@@ -37,6 +54,14 @@ class Dashboard extends React.Component {
     }
 
     render() {
+
+        const data = {
+            labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
+            series: [...this.state.data]
+        };
+
+        const type = "Line";
+
         return (
             <div className="dashboard-all">
 
@@ -103,9 +128,14 @@ class Dashboard extends React.Component {
 
 
 
-                            {/* Friend Request */}
+                            {/* Graph */}
                             <div className="dashboard-friend-request-box">
-                                <div className="dashboard-friend-request-box-inner">Friend Requests</div>
+                                <div className="dashboard-friend-request-box-inner">Weekly Stats</div>
+                                    <ul className="ct-legend">
+                                        <li className="ct-series-0">Sent Payments</li>
+                                        <li className="ct-series-1">Received Payments</li>
+                                    </ul>
+                                    <ChartistGraph data={data} type={type} />
                             </div>
 
 

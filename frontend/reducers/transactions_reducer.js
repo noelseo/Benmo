@@ -7,18 +7,19 @@ const TransactionsReducer = (oldState = {}, action) => {
     switch (action.type) {
         case RECEIVE_ALL_TRANSACTIONS: //reducer heard it from 'transaction_actions.js'
 
+            if (!action.payload.transactions) return oldState;
 
-            Object.keys(action.payload.transactions).forEach(id => ( 
-                      //action -> line 6 in 'transaction_actions.js'
-                      //action is -> { type: RECEIVE_ALL_TRANSACTIONS, transactions: transactions_object }
-                newState[id] = action.payload.transactions[id]
-            ))
+            Object.keys(action.payload.transactions).forEach(
+              id => (newState[id] = action.payload.transactions[id])
+            );
 
+            //action -> line 6 in 'transaction_actions.js'
+            //action is -> { type: RECEIVE_ALL_TRANSACTIONS, transactions: transactions_object }
+                
             return newState; 
 
         case CLEAR_TRANSACTIONS:
             return {};
-
 
         default:
             return oldState;

@@ -14,6 +14,9 @@ Rails.application.routes.draw do
     resources :transactions, only: [:show]
 
     resource :session, only: [:create, :destroy]
+
+    #custom route for graph
+    get 'transactions/users/:id', :to => 'transactions#graph' 
   end
 
 end

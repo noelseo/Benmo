@@ -7,11 +7,14 @@
     <%= csp_meta_tag %>
 
 
-    <Link 
+    <link 
     rel="icon" 
     type="image/icon" 
     href="https://raw.githubusercontent.com/noelseo/Benmo/master/app/assets/images/benmo.ico"
     >
+
+    <link rel="stylesheet" href="<%= asset_path('/stylesheets/chartist.min.css') %>">
+    <script src="<%= asset_path('/javascripts/chartist.min.js') %>"></script>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
