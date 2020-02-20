@@ -80,6 +80,7 @@
     line-height: 47px;
     cursor: pointer;
     background: transparent;
+    outline: none;
 }
 
 .navbar-logout-button:hover {
