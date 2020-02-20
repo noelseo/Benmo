@@ -1,22 +1,23 @@
 // Place all the styles related to the transactions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 $ct-series-colors: (
+        #bc021b,
         #3C95D2,
-        #f05b4f,
-        #f4c63d,
-        #d17905,
-        #453d3f,
-        #59922b,
-        #0544d3,
-        #6b0392,
-        #f05b4f,
-        #dda458,
-        #eacf7d,
-        #86797d,
-        #b2c326,
-        #6188e2,
-        #a748ca
+        // #f4c63d,
+        // #d17905,
+        // #453d3f,
+        // #59922b,
+        // #0544d3,
+        // #6b0392,
+        // #f05b4f,
+        // #dda458,
+        // #eacf7d,
+        // #86797d,
+        // #b2c326,
+        // #6188e2,
+        // #a748ca
 ) !default;
 
 .ct-legend {
