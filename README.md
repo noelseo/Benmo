@@ -60,6 +60,45 @@ Benmo is a clone of Venmo, which is a service of PayPal, Inc., a licensed provid
     }
 ```
 
+### Weekly Stats of Transactions of Past 7 Days
+* Graph of past 7 day transactions is provided
+* User is able to check both sent and received transactions in one place
+
+
+![Search](./README/benmo_graph.png)
+
+```ruby
+    def graph
+        @sent_transactions = Transaction.where(created_at: 7.days.ago..Time.now, sender_id: params[:id])
+        @received_transactions = Transaction.where(created_at: 7.days.ago..Time.now, receiver_id: params[:id])
+
+        result = []
+
+        current_day = 7.days.ago
+        day_transactions = []
+
+
+        i = 0
+        j = 0
+        while result.length < 7
+            if j >= @sent_transactions.length || current_day.end_of_day < @sent_transactions[j].created_at
+                current_day = (current_day.next_day(1))
+                result.push(day_transactions)
+                day_transactions = []
+                i += 1
+                next
+            end
+
+            if j < @sent_transactions.length && current_day.day == @sent_transactions[j].created_at.day && current_day.month == @sent_transactions[j].created_at.month && current_day.year == @sent_transactions[j].created_at.year
+                day_transactions.push(@sent_transactions[j])
+            end
+
+            j += 1
+        end
+    end
+```
+
+
 ### Transaction History View
 * User is able to see the list of the past transactions in the order of processed date and time
 
