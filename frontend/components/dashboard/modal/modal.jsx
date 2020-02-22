@@ -29,6 +29,8 @@ class Modal extends React.Component {
     handleSubmit(e) {
         if (parseFloat(this.state.amount) === 0) {
             alert("You must give a valid amount");
+        } else if (parseFloat(this.state.amount) > this.props.currentUser.balance) {
+            alert("You don't have enough funds")  
         } else {
             this.setState({ show: false, selectedFriend: this.props.friend, receiver_id: this.props.friend.id },
                 () => {

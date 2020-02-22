@@ -60,6 +60,8 @@ class Dashboard extends React.Component {
             alert("You must give a valid amount");
         } else if (this.state.receiver_id === null) {
             alert("You must select a payee");
+        } else if (parseFloat(this.state.amount) > this.props.currentUser.balance) {
+            alert("You don't have enough funds") 
         } else {
             this.props.createATransaction(this.state, this.props.currentUser);
         }
