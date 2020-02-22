@@ -22,7 +22,7 @@ const TransactionsReducer = (oldState = {}, action) => {
             return {};
 
         default:
-            return oldState;
+           return oldState;
     }
 }
 

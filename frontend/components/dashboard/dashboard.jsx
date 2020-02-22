@@ -23,15 +23,27 @@ class Dashboard extends React.Component {
     }
 
     // graph
+    // after component is mounted
     componentDidMount() {
         fetchGraphData(this.props.currentUser.id).then(res => {
-            console.log(res);
-            
             this.setState({
                 data: [{"name": "Sent Payments", "data": res.sent_transactions}, {"name": "Received Payments", "data": res.received_transactions}]
             })
         });
     }
+
+    // graph updates when new transaction creates
+    // after component is updated
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.transactions_length !== this.props.transactions_length) {
+            fetchGraphData(this.props.currentUser.id).then(res => {
+                this.setState({
+                    data: [{ "name": "Sent Payments", "data": res.sent_transactions }, { "name": "Received Payments", "data": res.received_transactions }]
+                })
+            });
+        }
+    }
+
 
     handleChange(e, field) {
         if (field === "amount" && parseFloat(e.target.value) < 0) {

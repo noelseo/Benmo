@@ -37,6 +37,8 @@ class Modal extends React.Component {
                     this.props.currentUser
                     );
                 })
+            // modal closes after new transaction creates
+            this.props.handleClose();
         }
     }
 

@@ -50,3 +50,20 @@ export const createATransaction = (transaction, user) => dispatch => ( //action 
 )
 
 // 3. reducer listens to the dispatch and according to the 'type', reducer runs 
+
+
+
+
+
+// export const FETCH_GRAPH_DATA = "FETCH_GRAPH_DATA";
+
+// export const fetchGraphData = (userId) => dispatch => (
+//     TransactionApiUtil.fetchGraphData(userId)
+//         .then(
+//             (banana) => dispatch( { type: FETCH_GRAPH_DATA, banana } )
+//         )
+// )
+
+// when running http://localhost:3000/api/transactions/users/2
+// this returns from backend -> {"sent_transactions":[0,61.0,100.38,1378.9,15.0,0,1301.0],"received_transactions":[0,0,35.39,0,100.0,0,2200.0]}
+// we set it to the variable, banana
