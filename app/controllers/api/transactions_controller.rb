@@ -47,60 +47,56 @@ class Api::TransactionsController < ApplicationController
     end
     
     def graph
-        @sent_transactions = Transaction.where(created_at: 7.days.ago..Time.now, sender_id: params[:id])
-        @received_transactions = Transaction.where(created_at: 7.days.ago..Time.now, receiver_id: params[:id])
+        @sent_transactions = Transaction.where(created_at: 6.days.ago..Time.now, sender_id: params[:id]) # test on rails c
+        @received_transactions = Transaction.where(created_at: 6.days.ago..Time.now, receiver_id: params[:id])
 
+
+        # sent transactions
         result = []
-
-        current_day = 7.days.ago
+        current_day = 6.days.ago
         day_transactions = []
-
-
+   
         i = 0
-        j = 0
         while result.length < 7
-            if j >= @sent_transactions.length || current_day.end_of_day < @sent_transactions[j].created_at
+            if i >= @sent_transactions.length || current_day.end_of_day < @sent_transactions[i].created_at
                 current_day = (current_day.next_day(1))
                 result.push(day_transactions)
                 day_transactions = []
-                i += 1
                 next
             end
 
-            if j < @sent_transactions.length && current_day.day == @sent_transactions[j].created_at.day && current_day.month == @sent_transactions[j].created_at.month && current_day.year == @sent_transactions[j].created_at.year
-                day_transactions.push(@sent_transactions[j])
+            if i < @sent_transactions.length && current_day.day == @sent_transactions[i].created_at.day && current_day.month == @sent_transactions[i].created_at.month && current_day.year == @sent_transactions[i].created_at.year
+                day_transactions.push(@sent_transactions[i])
             end
 
-            j += 1
+            i += 1
         end
-
         
-        other_result = []
 
-        current_day = 7.days.ago
+        # received transactions
+        other_result = []
+        current_day = 6.days.ago
         day_transactions = []
 
         i = 0
-        j = 0
         while other_result.length < 7
-            if j >= @received_transactions.length || current_day.end_of_day < @received_transactions[j].created_at
+            if i >= @received_transactions.length || current_day.end_of_day < @received_transactions[i].created_at
                 current_day = (current_day.next_day(1))
                 other_result.push(day_transactions)
                 day_transactions = []
-                i += 1
                 next
             end
   
-            if j < @received_transactions.length && current_day.day == @received_transactions[j].created_at.day && current_day.month == @received_transactions[j].created_at.month && current_day.year == @received_transactions[j].created_at.year
-                day_transactions.push(@received_transactions[j])
+            if i < @received_transactions.length && current_day.day == @received_transactions[i].created_at.day && current_day.month == @received_transactions[i].created_at.month && current_day.year == @received_transactions[i].created_at.year
+                day_transactions.push(@received_transactions[i])
             end
 
-            j += 1
+            i += 1
         end
 
         result.map! { |r| r.map! {|t| t.amount}.sum }
         other_result.map! { |r| r.map! {|t| t.amount}.sum }
-        render json: {sent_transactions: result, received_transactions: other_result}
+        render json: {sent_transactions: result, received_transactions: other_result} # test by running http://localhost:3000/api/transactions/users/2
 
     end
 

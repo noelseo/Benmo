@@ -69,33 +69,30 @@ Benmo is a clone of Venmo, which is a service of PayPal, Inc., a licensed provid
 
 ```ruby
     def graph
-        @sent_transactions = Transaction.where(created_at: 7.days.ago..Time.now, sender_id: params[:id])
-        @received_transactions = Transaction.where(created_at: 7.days.ago..Time.now, receiver_id: params[:id])
+        @sent_transactions = Transaction.where(created_at: 6.days.ago..Time.now, sender_id: params[:id])
+        @received_transactions = Transaction.where(created_at: 6.days.ago..Time.now, receiver_id: params[:id])
 
+
+        # sent transactions
         result = []
-
-        current_day = 7.days.ago
+        current_day = 6.days.ago
         day_transactions = []
-
-
+   
         i = 0
-        j = 0
         while result.length < 7
-            if j >= @sent_transactions.length || current_day.end_of_day < @sent_transactions[j].created_at
+            if i >= @sent_transactions.length || current_day.end_of_day < @sent_transactions[i].created_at
                 current_day = (current_day.next_day(1))
                 result.push(day_transactions)
                 day_transactions = []
-                i += 1
                 next
             end
 
-            if j < @sent_transactions.length && current_day.day == @sent_transactions[j].created_at.day && current_day.month == @sent_transactions[j].created_at.month && current_day.year == @sent_transactions[j].created_at.year
-                day_transactions.push(@sent_transactions[j])
+            if i < @sent_transactions.length && current_day.day == @sent_transactions[i].created_at.day && current_day.month == @sent_transactions[i].created_at.month && current_day.year == @sent_transactions[i].created_at.year
+                day_transactions.push(@sent_transactions[i])
             end
 
-            j += 1
+            i += 1
         end
-    end
 ```
 
 
