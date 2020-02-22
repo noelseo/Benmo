@@ -22,7 +22,7 @@ class Modal extends React.Component {
         } else {
             this.setState({ [field]: parseFloat(e.target.value).toFixed(2) });
         }
-        
+
         // console.log( typeof e.target.value );  => shows as string
     }
 
@@ -30,15 +30,15 @@ class Modal extends React.Component {
         if (parseFloat(this.state.amount) === 0) {
             alert("You must give a valid amount");
         } else {
-            this.setState({ show: false, selectedFriend: this.props.friend, receiver_id: this.props.friend.id }, 
+            this.setState({ show: false, selectedFriend: this.props.friend, receiver_id: this.props.friend.id },
                 () => {
                     this.props.createATransaction(
-                    this.state,
-                    this.props.currentUser
+                        this.state,
+                        this.props.currentUser
                     );
                 })
-            // modal closes after new transaction creates
-            this.props.handleClose();
+            // modal closes after new transaction is made
+            this.props.handleClose()
         }
     }
 
@@ -55,7 +55,7 @@ class Modal extends React.Component {
 
                         <div className="modal-top">
                             <span className="modal-recipient"> {friend.first_name}</span>
-                            
+
                             <button className="modal-button" onClick={handleClose}>
                                 <div className="modal-button-text"> x </div>
                             </button>
@@ -64,10 +64,10 @@ class Modal extends React.Component {
                         <div className="modal-amount-box">
                             <span className="modal-currency">$</span>
                             <input
-                            className="modal-pay-amount"
-                            type="number"
-                            placeholder="How much?"
-                            onChange={e => this.handleChange(e, "amount")}
+                                className="modal-pay-amount"
+                                type="number"
+                                placeholder="How much?"
+                                onChange={e => this.handleChange(e, "amount")}
                             />
                             {/* if you're not in a form, don't use input:submit */}
                         </div>
