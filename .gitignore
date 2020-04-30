@@ -7,3 +7,5 @@ bundle.js.map
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+
+.env
