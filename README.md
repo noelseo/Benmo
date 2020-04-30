@@ -119,6 +119,21 @@ Benmo is a clone of Venmo, which is a service of PayPal, Inc., a licensed provid
     }
 ```
 
+### SMS Message Integration
+* Both sender and receiver will receive sms notification immediately after the transaction is completed
+
+
+![Search](./README/twilio.jpg)
+
+```ruby
+client = Twilio::REST::Client.new
+
+client.messages.create(
+    from: ENV["twilio_phone_number"],
+    to: "+1#{receiver.phone_number}",
+    body: "You just received $#{"%.2f" % @transaction.amount} from #{sender.first_name}!",
+)
+```
 
 ## Future Plans
 * Friends Requests
