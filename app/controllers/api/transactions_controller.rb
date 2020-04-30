@@ -16,6 +16,23 @@ class Api::TransactionsController < ApplicationController
             sender.save
             receiver.save
           
+            
+            # Twilio SMS
+            client = Twilio::REST::Client.new
+
+            client.messages.create(
+                from: ENV["twilio_phone_number"],
+                to: "+1#{receiver.phone_number}",
+                body: "You just received $#{"%.2f" % @transaction.amount} from #{sender.first_name}!",
+            )
+
+            client.messages.create(
+                from: ENV["twilio_phone_number"],
+                to: "+1#{sender.phone_number}",
+                body: "You just sent #{receiver.first_name} $#{"%.2f" % @transaction.amount}!",
+            )
+
+
             # @transactions = Transaction.where('sender_id = :id or receiver_id = :id', { id: params[:user_id] }).order(created_at: :desc)
             redirect_to controller: 'transactions', action: 'index', user_id: params[:user_id]
         else
