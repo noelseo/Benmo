@@ -44,19 +44,17 @@ class Dashboard extends React.Component {
         }
     }
 
-
     handleChange(e, field) {
         if (field === "amount" && parseFloat(e.target.value) < 0) {
             this.setState({ [field]: 0 });
         } else {
             this.setState({ [field]: parseFloat(e.target.value).toFixed(2) });
         }
-        
         // console.log( typeof e.target.value );  => shows as string
     }
 
     handleSubmit(e) {
-        if (parseFloat(this.state.amount) === 0) {
+        if (sparseFloat(this.state.amount) === 0) {
             alert("You must give a valid amount");
         } else if (this.state.receiver_id === null) {
             alert("You must select a payee");
@@ -119,7 +117,6 @@ class Dashboard extends React.Component {
                             <div className="dashboard-pay-box">
 
                                 <div className="dashboard-pay-box-inner">Initiate Transactions</div>
-
                                 <div className="dashboard-pay-box-inner-low">
                                     {/* #1 */}
                                     <div className="dashboard-pay-dropdown">
@@ -136,8 +133,7 @@ class Dashboard extends React.Component {
                                     {/* very front */}
                                     <button className="dashboard-pay-button" onClick={this.handleSubmit}>Pay</button>
                                 </div>
-                                    
-
+                        
                             </div>
 
 

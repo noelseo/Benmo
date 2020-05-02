@@ -1,22 +1,20 @@
 import React from 'react';
 import GreetingContainer from '../greeting/greeting_container';
-import Dashboard from '../dashboard/dashboard_container';
+import DashboardContainer from '../dashboard/dashboard_container';
 
 const Home = ({ currentUser }) => {
 
     //before user logging in
-    const sessionLinks = () => (
+    const notLoggedIn = () => (
         <GreetingContainer />
     );
 
-
     //after using logged in
-    const loggedIn = () => { 
-        return <Dashboard /> 
-    }
+    const loggedIn = () => (
+        <DashboardContainer /> 
+    );
 
-    return currentUser ? loggedIn() : sessionLinks();
+    return currentUser ? loggedIn() : notLoggedIn();
 };
-
 
 export default Home;

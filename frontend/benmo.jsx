@@ -22,12 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //testing
-    window.getState = store.getState;
-    window.dispatch = store.dispatch;
+    // window.getState = store.getState;
+    // window.dispatch = store.dispatch;
     
-    window.signup = signup;
-    window.login = login;
-    window.logout = logout;
+    // window.signup = signup;
+    // window.login = login;
+    // window.logout = logout;
     //testing
     
     const root = document.getElementById('root');

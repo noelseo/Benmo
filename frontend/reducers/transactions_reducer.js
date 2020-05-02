@@ -5,7 +5,8 @@ const TransactionsReducer = (oldState = {}, action) => {
     const newState = Object.assign({}, oldState)
 
     switch (action.type) {
-        case RECEIVE_ALL_TRANSACTIONS: //reducer heard it from 'transaction_actions.js'
+        case RECEIVE_ALL_TRANSACTIONS: 
+        //reducer heard it from 'transaction_actions.js'
 
             if (!action.payload.transactions) return oldState;
 
@@ -13,9 +14,6 @@ const TransactionsReducer = (oldState = {}, action) => {
               id => (newState[id] = action.payload.transactions[id])
             );
 
-            //action -> line 6 in 'transaction_actions.js'
-            //action is -> { type: RECEIVE_ALL_TRANSACTIONS, transactions: transactions_object }
-                
             return newState; 
 
         case CLEAR_TRANSACTIONS:
@@ -27,6 +25,14 @@ const TransactionsReducer = (oldState = {}, action) => {
 }
 
 export default TransactionsReducer;
+
+
+
+
+
+
+
+
 
 
 // { 

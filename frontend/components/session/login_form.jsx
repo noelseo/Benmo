@@ -19,7 +19,6 @@ class LoginForm extends React.Component {
         e.preventDefault();
         this.props.processForm(this.state)
             .then(() => this.props.history.push('/'));
-        
     }
 
     //clear the errors
